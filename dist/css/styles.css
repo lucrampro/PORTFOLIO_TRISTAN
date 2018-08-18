@@ -59,6 +59,18 @@ h2 {
   font-weight: normal;
 }
 
+@font-face {
+  font-family: 'superFly';
+  src: url("../fonts/SuperFlyTwo.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gothamBook";
+  src: url("../fonts/gothamBook.woff2") format("woff2"), url("../fonts/gothamBook.woff") format("woff");
+}
+
 * {
   -webkit-touch-callout: none;
   /* iOS Safari */
@@ -74,12 +86,18 @@ h2 {
                                     supported by Chrome and Opera */
 }
 
-header {
-  height: 50px;
-  position: relative;
+body {
+  font-family: 'gothamBook';
+  background: #f7f7f7;
 }
 
-header .burger {
+body header {
+  height: 50px;
+  position: fixed;
+  width: 100%;
+}
+
+body header .burger {
   display: block;
   float: right;
   height: 150px;
@@ -88,26 +106,26 @@ header .burger {
   background: none;
   border-radius: 50%;
   position: relative;
-  z-index: 2;
+  z-index: 99;
 }
 
-header .burger.open .trait1 {
+body header .burger.open .trait1 {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
   top: 50%;
 }
 
-header .burger.open .trait2 {
+body header .burger.open .trait2 {
   opacity: 0;
 }
 
-header .burger.open .trait3 {
+body header .burger.open .trait3 {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
   top: 50%;
 }
 
-header .burger .trait1 {
+body header .burger .trait1 {
   height: 3px;
   width: 50px;
   background: #333333;
@@ -120,7 +138,7 @@ header .burger .trait1 {
   transition: 0.4s ease-in-out;
 }
 
-header .burger .trait2 {
+body header .burger .trait2 {
   height: 3px;
   width: 50px;
   background: #333333;
@@ -134,7 +152,7 @@ header .burger .trait2 {
   opacity: 1;
 }
 
-header .burger .trait3 {
+body header .burger .trait3 {
   height: 3px;
   width: 50px;
   background: #333333;
@@ -147,7 +165,7 @@ header .burger .trait3 {
   transition: 0.4s ease-in-out;
 }
 
-header .menu {
+body header .menu {
   position: absolute;
   top: 0;
   left: 0;
@@ -155,8 +173,65 @@ header .menu {
   width: 0%;
 }
 
-header .menu .yellow {
+body header .menu .yellow {
   height: 100%;
   width: 100%;
   background: #ffce71;
+}
+
+body main {
+  padding-top: 100px;
+}
+
+body main .jaune img {
+  position: absolute;
+  left: 50%;
+  margin-left: -40%;
+  width: 80%;
+}
+
+body main h1 {
+  font-family: 'superFly';
+  font-size: 8rem;
+  text-transform: inherit;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+body main p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 100px;
+}
+
+body main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  text-align: center;
+  margin: 50px 10% 0 10%;
+}
+
+body main ul li {
+  display: block;
+  margin: auto;
+  height: 100px;
+  width: 100px;
+}
+
+body main ul li img {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+}
+
+body main .holiday {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }

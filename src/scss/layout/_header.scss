@@ -1,97 +1,182 @@
-header {
+body {
 
-    height: 50px;
-    position: relative;
+    font-family: 'gothamBook';
+    background: $bg_portfolio_2k18;
 
-    .burger {
-        display: block;
-        float: right;
-        height: 150px;
-        width: 150px;
-        margin: 20px 20px 0 0;
-        background: none;
-        border-radius: 50%;
-        position: relative;
-        z-index: 2;
+    header {
 
-        &.open {
+        height: 50px;
+        position: fixed;
+        width: 100%;
+
+
+        .burger {
+            display: block;
+            float: right;
+            height: 150px;
+            width: 150px;
+            margin: 20px 20px 0 0;
+            background: none;
+            border-radius: 50%;
+            position: relative;
+            z-index: 99;
+
+            &.open {
+                .trait1 {
+
+                    transform: translate(-50%, -50%) rotate(45deg);
+                    top: 50%;
+
+                }
+                .trait2 {
+
+                    opacity: 0;
+
+                }
+                .trait3 {
+
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                    top: 50%;
+                }
+            }
+
             .trait1 {
 
-                transform: translate(-50%, -50%) rotate(45deg);
-                top: 50%;
+                height: 3px;
+                width: 50px;
+                background: $black;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -40%) rotate(0deg);
+                transition: 0.4s ease-in-out;
 
             }
+
             .trait2 {
 
-                opacity: 0;
+                height: 3px;
+                width: 50px;
+                background: $black;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(0deg);
+                transition: 0.4s ease-in-out;
+                opacity: 1;
 
             }
+
             .trait3 {
 
-                transform: translate(-50%, -50%) rotate(-45deg);
-                top: 50%;
+                height: 3px;
+                width: 50px;
+                background: $black;
+                position: absolute;
+                left: 50%;
+                top: 60%;
+                transform: translate(-50%, -60%) rotate(0deg);
+                transition: 0.4s ease-in-out;
+
             }
+
         }
 
-        .trait1 {
 
-            height: 3px;
-            width: 50px;
-            background: $black;
+        .menu {
+
             position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -40%) rotate(0deg);
-            transition: 0.4s ease-in-out;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 0%;
+            
+            
+
+            .yellow {
+
+                height: 100%;
+                width: 100%;
+                background: $yellow_portfolio;
+                
+                
+                
+
+            }
 
         }
-
-        .trait2 {
-
-            height: 3px;
-            width: 50px;
-            background: $black;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(0deg);
-            transition: 0.4s ease-in-out;
-            opacity: 1;
-
-        }
-
-        .trait3 {
-
-            height: 3px;
-            width: 50px;
-            background: $black;
-            position: absolute;
-            left: 50%;
-            top: 60%;
-            transform: translate(-50%, -60%) rotate(0deg);
-            transition: 0.4s ease-in-out;
-
-        }
-
     }
 
-
-    .menu {
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 0%;
-     
-        .yellow{
+    main {
+        padding-top: 100px;
             
-            height: 100%;
+            
+        .jaune { 
+            
+            img {
+                position: absolute;
+                left: 50%;
+                margin-left: -40%;
+                width: 80%;
+            }
+
+        }
+
+        h1 {
+
+            font-family: 'superFly';
+            font-size: 8rem;
+            text-transform: inherit;
             width: 100%;
-            background: $yellow_portfolio;
+            text-align: center;
+            position: relative;
+
+        }
+
+        p {
+
+            width: 100%;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 100px;
+
+        }
+
+        ul {
+
+            display: flex;
+            width: 80%;
+            text-align: center;
+            margin: 50px 10% 0 10%;
+
+            li {
+
+                display: block;
+                margin: auto;
+                height: 100px;
+                width: 100px;
+
+                img {
+
+                    width: 100px;
+                    height: 100px;
+                    margin: 0;
+                    
+
+                }
+            }
+
+        }
+
+        .holiday {
+            
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
             
             
         }
-
     }
+
 }
