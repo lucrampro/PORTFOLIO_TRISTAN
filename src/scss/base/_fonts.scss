@@ -8,6 +8,12 @@
 }
 
 @font-face {
+    font-family: "gothamMedium";
+    src: url("../fonts/gothammedium.woff2") format("woff2"),
+    url("../fonts/gothammedium.woff") format("woff");
+}
+
+@font-face {
     font-family: "gothamBold";
     src: url("../fonts/gothamBold.woff2") format("woff2"),
     url("../fonts/gothamBold.woff") format("woff");

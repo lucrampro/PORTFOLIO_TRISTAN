@@ -65,6 +65,11 @@ h2 {
 }
 
 @font-face {
+  font-family: "gothamMedium";
+  src: url("../fonts/gothammedium.woff2") format("woff2"), url("../fonts/gothammedium.woff") format("woff");
+}
+
+@font-face {
   font-family: "gothamBold";
   src: url("../fonts/gothamBold.woff2") format("woff2"), url("../fonts/gothamBold.woff") format("woff");
 }
@@ -103,6 +108,25 @@ body {
   background: #f7f7f7;
 }
 
+.loader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #f7f7f7;
+  z-index: 100;
+}
+
+.loader #percent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20rem;
+  color: #ffce71;
+  font-family: "gothamBold";
+}
+
 header {
   height: 50px;
   position: fixed;
@@ -114,14 +138,14 @@ header .name {
   position: absolute;
   width: 400px;
   left: 50%;
+  top: 10px;
   margin-left: -200px;
   z-index: 99;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
   font-family: 'moonstruck';
-  font-size: 250px;
+  font-size: 100px;
   text-align: center;
-  color: #333333;
 }
 
 header .menu {
@@ -167,8 +191,8 @@ header .menu ul li:nth-child(4) {
 header .menu ul li a {
   display: block;
   font-family: gothamBold;
-  font-size: 130px;
-  line-height: 250px;
+  font-size: 50px;
+  line-height: 220px;
   text-align: center;
   color: #edb551;
   text-decoration: none;
@@ -177,7 +201,7 @@ header .menu ul li a {
 header .menu ul li:before {
   position: absolute;
   width: 100%;
-  font-size: 140px;
+  font-size: 50px;
   font-family: gothamBold;
   text-align: center;
   color: #333333;
@@ -206,12 +230,53 @@ header .menu ul li:nth-child(4) a {
   color: #ed5962;
 }
 
+@media screen and (min-width: 980px) {
+  header .name {
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    font-size: 90px;
+    width: 150px;
+    color: white;
+    text-shadow: 1px 3px 1px #333333;
+  }
+  header .menu {
+    width: 100%;
+    background: none;
+    height: 10vh;
+  }
+  header .menu ul {
+    position: relative;
+    width: auto;
+    float: right;
+    margin-right: 20px;
+  }
+  header .menu ul li {
+    position: relative;
+    top: inherit !important;
+    left: inherit !important;
+    -webkit-transform: none;
+            transform: none;
+  }
+  header .menu ul li:before {
+    display: none;
+  }
+  header .menu ul li a {
+    margin: 40px 10px;
+    color: white;
+    font-size: 20px;
+    line-height: initial;
+    text-shadow: 1px 2px 1px #333333;
+    font-family: "gothammedium";
+  }
+}
+
 .burger {
   position: absolute;
-  height: 200px;
-  width: 150px;
-  top: 50px;
-  right: 50px;
+  height: 100px;
+  width: 50px;
+  top: 10px;
+  right: 30px;
   z-index: 99;
 }
 
@@ -233,8 +298,8 @@ header .menu ul li:nth-child(4) a {
 
 .burger div[class*="trait"] {
   position: absolute;
-  height: 6px;
-  width: 60px;
+  height: 4px;
+  width: 30px;
   left: 50%;
   background: #333333;
   border-radius: 10px;
@@ -261,8 +326,62 @@ header .menu ul li:nth-child(4) a {
           transform: translate(-50%, -60%) rotate(0deg);
 }
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 980px) {
   .burger {
-    background: red;
+    display: none;
+  }
+}
+
+.movie {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.movie #movie-mobile {
+  display: block;
+  overflow: hidden;
+  margin-left: 50%;
+  height: 100vh;
+  margin-top: 0px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.movie #movie-desktop {
+  display: none;
+}
+
+.movie .play {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0;
+  bottom: 40px;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  font-family: "gothambold";
+}
+
+.movie .play:after {
+  content: '';
+  display: block;
+  background: #fe9ca9;
+  width: 100%;
+  height: 4px;
+}
+
+@media screen and (min-width: 980px) {
+  .movie #movie-desktop {
+    display: block;
+    min-width: 100%;
+    min-height: 56.25vw;
+  }
+  .movie #movie-mobile,
+  .movie .play {
+    display: none;
   }
 }

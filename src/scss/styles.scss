@@ -13,5 +13,7 @@ $pesticide-debug-depth: false;
 
 // $Layout
 @import 'layout/base';
+@import 'layout/loader';
 @import 'layout/header';
 @import 'layout/burger';
+@import 'layout/movie';
