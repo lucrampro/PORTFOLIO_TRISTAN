@@ -183,20 +183,36 @@ body main {
   padding-top: 100px;
 }
 
-body main .jaune img {
+body main .jaune .gostJaune {
+  overflow: hidden;
   position: absolute;
   left: 50%;
   margin-left: -40%;
-  width: 80%;
+  width: 0;
 }
 
-body main h1 {
+body main .jaune .gostJaune img {
+  width: 800px;
+}
+
+body main .jaune .cachTitle {
+  overflow: hidden;
+  height: 145px;
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+body main .jaune .cachTitle h1 {
   font-family: 'superFly';
   font-size: 8rem;
   text-transform: inherit;
   width: 100%;
   text-align: center;
   position: relative;
+  opacity: 1;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 body main p {
@@ -204,6 +220,7 @@ body main p {
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 100px;
+  opacity: 0;
 }
 
 body main ul {
@@ -220,6 +237,8 @@ body main ul li {
   margin: auto;
   height: 100px;
   width: 100px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 body main ul li img {
@@ -232,6 +251,8 @@ body main .holiday {
   position: absolute;
   bottom: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  width: 700px;
+  -webkit-transform: translateX(-50%) scale(0);
+          transform: translateX(-50%) scale(0);
+  opacity: 0;
 }
