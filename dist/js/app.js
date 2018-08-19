@@ -5,27 +5,21 @@ $('document').ready(function () {
 
     //    MENU DEROULANT
     $(".burger").click(function () {
-        
 
-        if ($(".menu").css("translateX()") === 0 + "%") {
-
+        if ($(".menu").width() === 0) {
 
             TweenMax.to(".menu", 1, {
-                x: "-100%",
+                width: "100%",
                 ease: Expo.easeInOut
             });
 
         } else {
 
             TweenMax.to(".menu", 1, {
-                x: "0",
+                width: "0%",
                 ease: Expo.easeInOut
             });
-
         }
-
-        var x = $('.menu').css('transform').replace(/[^0-9\-.,]/g, '').split(',');
-        console.log( x );
         $(".burger").toggleClass("open");
     });
     //    PAGE VOYAGE
@@ -68,7 +62,7 @@ $('document').ready(function () {
 
                     TweenMax.to(".SUI", 0.3, {
 
-                        delay: 0.15,
+                        delay: 0.16,
                         css: {
                             scale: 1
                         },
