@@ -5,21 +5,27 @@ $('document').ready(function () {
 
     //    MENU DEROULANT
     $(".burger").click(function () {
+        
 
-        if ($(".menu").width() === 0) {
+        if ($(".menu").css("translateX()") === 0 + "%") {
+
 
             TweenMax.to(".menu", 1, {
-                width: "100%",
+                x: "-100%",
                 ease: Expo.easeInOut
             });
 
         } else {
 
             TweenMax.to(".menu", 1, {
-                width: "0%",
+                x: "0",
                 ease: Expo.easeInOut
             });
+
         }
+
+        var x = $('.menu').css('transform').replace(/[^0-9\-.,]/g, '').split(',');
+        console.log( x );
         $(".burger").toggleClass("open");
     });
     //    PAGE VOYAGE
