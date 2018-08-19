@@ -1,46 +1,48 @@
 
 
-        .burger {
+    .burger {
+        position: absolute;
+        height: 200px;
+        width: 150px;
+        top: 50px;
+        right: 50px;
+        z-index: 99;
+
+        &.open {
+            .trait1 { transform: translate(-50%, -50%) rotate(45deg); top: 50%; }
+            .trait2 { opacity: 0; }
+            .trait3 { transform: translate(-50%, -50%) rotate(-45deg); top: 50%; }
+        }
+
+        div[class*="trait"] {
             position: absolute;
-            height: 200px;
-            width: 150px;
-            top: 50px;
-            right: 50px;
-            z-index: 99;
+            height: 6px;
+            width: 60px;
+            left: 50%;
+            background: $black;
+            border-radius: 10px;
+            transition: 0.4s ease-in-out;
+        }
 
-            &.open {
-                .trait1 { transform: translate(-50%, -50%) rotate(45deg); top: 50%; }
-                .trait2 { opacity: 0; }
-                .trait3 { transform: translate(-50%, -50%) rotate(-45deg); top: 50%; }
-            }
+        .trait1 {
+            top: 40%;
+            transform: translate(-50%, -40%) rotate(0deg);
+        }
 
-            div[class*="trait"] {
-                position: absolute;
-                height: 6px;
-                width: 60px;
-                left: 50%;
-                background: $black;
-                border-radius: 10px;
-                transition: 0.4s ease-in-out;
-            }
-
-            .trait1 {
-                top: 40%;
-                transform: translate(-50%, -40%) rotate(0deg);
-            }
-
-            .trait2 {
-                top: 50%;
-                transform: translate(-50%, -50%) rotate(0deg);
-                opacity: 1;
-
-            }
-
-            .trait3 {
-                top: 60%;
-                transform: translate(-50%, -60%) rotate(0deg);
-            }
-
-            
+        .trait2 {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(0deg);
+            opacity: 1;
 
         }
+
+        .trait3 {
+            top: 60%;
+            transform: translate(-50%, -60%) rotate(0deg);
+        }
+
+        @media screen and (min-width: "380px") {
+            background: red;
+        }
+
+    }

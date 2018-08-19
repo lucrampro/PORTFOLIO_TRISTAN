@@ -100,7 +100,7 @@ h2 {
 
 body {
   font-family: 'gothamBook';
-  background: red;
+  background: #f7f7f7;
 }
 
 header {
@@ -259,4 +259,10 @@ header .menu ul li:nth-child(4) a {
   top: 60%;
   -webkit-transform: translate(-50%, -60%) rotate(0deg);
           transform: translate(-50%, -60%) rotate(0deg);
+}
+
+@media screen and (min-width: 380px) {
+  .burger {
+    background: red;
+  }
 }

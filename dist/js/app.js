@@ -1,8 +1,6 @@
 $('document').ready(function () {
 
 
-
-
     //    MENU DEROULANT
     $(".burger").click(function () {
 
