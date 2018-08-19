@@ -15,7 +15,7 @@ $('document').ready(function () {
 
         } else {
 
-            TweenMax.to(".menu", 1, {
+            TweenMax.to(".menu", 0.5, {
                 width: "0%",
                 ease: Expo.easeInOut
             });
@@ -134,13 +134,35 @@ $('document').ready(function () {
                         ease: Back.easeOut.config(1.7),
                     });
 
-                    TweenMax.to(".holiday", 0.5, {
+                    TweenMax.to("span", 0.5, {
                         delay: 0.45,
-                        x: "-50%",
-                        scale: 1,
-                        opacity: 1,
-                        ease: Bounce.easeOut
+                        opacity: 0.4,
+                        ease: Bounce.easeOut,
+                        
                     });
+
+
+                    if ($(window).width() < 980) {
+                        
+                        TweenMax.to(".holiday", 2, {
+                            delay: 0.55,
+                            x: "-50%",
+                            bottom:0,
+                            opacity: 1
+
+                        });
+                    }
+                    else {
+                        
+                        TweenMax.to(".holiday", 2, {
+                            delay: 0.55,
+                            x: 0,
+                            bottom:0,
+                            opacity: 1
+
+                        });
+                        
+                    }
 
 
 
