@@ -5,27 +5,21 @@ $('document').ready(function () {
 
     //    MENU DEROULANT
     $(".burger").click(function () {
-        
 
-        if ($(".menu").css("translateX()") === 0 + "%") {
-
+        if ($(".menu").width() === 0) {
 
             TweenMax.to(".menu", 1, {
-                x: "-100%",
+                width: "100%",
                 ease: Expo.easeInOut
             });
 
         } else {
 
-            TweenMax.to(".menu", 1, {
-                x: "0",
+            TweenMax.to(".menu", 0.5, {
+                width: "0%",
                 ease: Expo.easeInOut
             });
-
         }
-
-        var x = $('.menu').css('transform').replace(/[^0-9\-.,]/g, '').split(',');
-        console.log( x );
         $(".burger").toggleClass("open");
     });
     //    PAGE VOYAGE
@@ -68,7 +62,7 @@ $('document').ready(function () {
 
                     TweenMax.to(".SUI", 0.3, {
 
-                        delay: 0.15,
+                        delay: 0.16,
                         css: {
                             scale: 1
                         },
@@ -140,13 +134,35 @@ $('document').ready(function () {
                         ease: Back.easeOut.config(1.7),
                     });
 
-                    TweenMax.to(".holiday", 0.5, {
+                    TweenMax.to("span", 0.5, {
                         delay: 0.45,
-                        x: "-50%",
-                        scale: 1,
-                        opacity: 1,
-                        ease: Bounce.easeOut
+                        opacity: 0.4,
+                        ease: Bounce.easeOut,
+                        
                     });
+
+
+                    if ($(window).width() < 980) {
+                        
+                        TweenMax.to(".holiday", 2, {
+                            delay: 0.55,
+                            x: "-50%",
+                            bottom:0,
+                            opacity: 1
+
+                        });
+                    }
+                    else {
+                        
+                        TweenMax.to(".holiday", 2, {
+                            delay: 0.55,
+                            x: 0,
+                            bottom:0,
+                            opacity: 1
+
+                        });
+                        
+                    }
 
 
 
