@@ -109,6 +109,12 @@ $('document').ready(function () {
     });
 
 
+    TweenMax.to(".fond", 0.5, {
+        opacity: 1,
+        delay: 1
+    });
+
+
 
 
 

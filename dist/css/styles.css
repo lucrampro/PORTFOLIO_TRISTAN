@@ -103,7 +103,6 @@ body {
 .voyage {
   height: 100vh;
   position: relative;
-  overflow: hidden;
 }
 
 .voyage .cacheTitle {
@@ -224,6 +223,160 @@ body {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   opacity: 0;
+}
+
+.daddy {
+  height: 100vh;
+  height: 100vh;
+  position: relative;
+}
+
+.daddy span {
+  display: block;
+}
+
+.daddy .cacheTitle {
+  position: absolute;
+  overflow: hidden;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+  width: 100%;
+  height: 50px;
+}
+
+.daddy .cacheTitle h1 {
+  font-family: "superFly";
+  font-size: 3rem;
+  text-transform: none;
+  z-index: 2;
+  -webkit-transform: translateY(90%);
+          transform: translateY(90%);
+}
+
+.daddy .parentJaune {
+  position: absolute;
+  width: 300px;
+  top: 10%;
+  left: 50%;
+  height: 50px;
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+  z-index: -1;
+}
+
+.daddy .parentJaune .cacheJaune {
+  width: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.daddy .parentJaune .cacheJaune img {
+  width: 300px;
+  width: 300px;
+  z-index: -1;
+}
+
+.daddy .cacheP {
+  overflow: hidden;
+  height: 40px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+  width: 100%;
+}
+
+.daddy .cacheP p {
+  font-size: 0.8rem;
+  text-align: center;
+  width: 100%;
+  -webkit-transform: translateY(125%);
+          transform: translateY(125%);
+}
+
+.daddy .cacheP p .heart {
+  color: #fe9ca9;
+  display: inline-block;
+}
+
+.daddy .pays1 {
+  width: 70%;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -28%);
+          transform: translate(-50%, -28%);
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.daddy .pays1 li {
+  display: block;
+  margin: auto;
+}
+
+.daddy .pays1 li img {
+  width: 30px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.daddy .pays2 {
+  width: 70%;
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -38%);
+          transform: translate(-50%, -38%);
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.daddy .pays2 li {
+  display: block;
+  margin: auto;
+}
+
+.daddy .pays2 li img {
+  width: 30px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.daddy .holidays {
+  width: 350px;
+  position: absolute;
+  left: 50%;
+  bottom: -5%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  opacity: 0;
+}
+
+.daddy .fond {
+  position: absolute;
+  font-family: 'gothamUltra';
+  font-size: 7rem;
+  z-index: -1;
+  color: #fefefe;
+  width: 100%;
+  text-align: center;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -80%);
+          transform: translate(-50%, -80%);
+  opacity: 0;
+}
+
+.daddy .fond span {
+  line-height: 65px;
 }
 
 header {
