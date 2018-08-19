@@ -1,14 +1,28 @@
-@font-face {
-font-family: 'superFly';
-    
-src: url('../fonts/SuperFlyTwo.otf') format('truetype');
-font-weight: normal;
-font-style: normal;
-}
+
 
 
 @font-face {
     font-family: "gothamBook";
     src: url("../fonts/gothamBook.woff2") format("woff2"),
     url("../fonts/gothamBook.woff") format("woff");
+}
+
+@font-face {
+    font-family: "gothamBold";
+    src: url("../fonts/gothamBold.woff2") format("woff2"),
+    url("../fonts/gothamBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'superFly';
+    src: url('../fonts/SuperFlyTwo.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'moonstruck';
+    src: url('../fonts/moonstruck-webfont.woff2') format('woff2'),
+         url('../fonts/moonstruck-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }

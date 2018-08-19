@@ -1,207 +1,77 @@
-body {
-
-    font-family: 'gothamBook';
-    background: $bg_portfolio_2k18;
-
+    
     header {
-
         height: 50px;
         position: fixed;
         width: 100%;
         z-index: 98;
 
-
-        .burger {
-            display: block;
-            float: right;
-            height: 150px;
-            width: 150px;
-            margin: 20px 20px 0 0;
-            background: none;
-            border-radius: 50%;
-            position: relative;
+        .name {
+            position: absolute;
+            width: 400px;
+            left: 50%;
+            margin-left: -200px;
             z-index: 99;
-
-            &.open {
-                .trait1 {
-
-                    transform: translate(-50%, -50%) rotate(45deg);
-                    top: 50%;
-
-                }
-                .trait2 {
-
-                    opacity: 0;
-
-                }
-                .trait3 {
-
-                    transform: translate(-50%, -50%) rotate(-45deg);
-                    top: 50%;
-                }
-            }
-
-            .trait1 {
-
-                height: 3px;
-                width: 50px;
-                background: $black;
-                position: absolute;
-                top: 40%;
-                left: 50%;
-                transform: translate(-50%, -40%) rotate(0deg);
-                transition: 0.4s ease-in-out;
-
-            }
-
-            .trait2 {
-
-                height: 3px;
-                width: 50px;
-                background: $black;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) rotate(0deg);
-                transition: 0.4s ease-in-out;
-                opacity: 1;
-
-            }
-
-            .trait3 {
-
-                height: 3px;
-                width: 50px;
-                background: $black;
-                position: absolute;
-                left: 50%;
-                top: 60%;
-                transform: translate(-50%, -60%) rotate(0deg);
-                transition: 0.4s ease-in-out;
-
-            }
-
+            transform: rotate(-15deg);
+            
+            font-family: 'moonstruck';
+            font-size: 250px;
+            text-align: center;
+            color: $black;
         }
-
 
         .menu {
-
             position: absolute;
+            width: 0%;
+            height: 100vh;
             top: 0;
             left: 0;
-            height: 100vh;
-            width: 0%;
+            background: $yellow_portfolio;
+            overflow: hidden;
 
-
-
-            .yellow {
-
-                height: 100%;
-                width: 100%;
-                background: $yellow_portfolio;
-
-
-
-
-            }
-
-        }
-    }
-
-    main {
-        padding-top: 100px;
-
-
-        .jaune {
-
-            .gostJaune {
-
-                overflow: hidden;
+            ul {
                 position: absolute;
-                left: 50%;
-                margin-left: -40%;
-                width: 0;
+                width: 100%;
+                height: 100%;
+    
+                li {
+                  position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-(50%));
 
-                img { width: 800px; }
+                    &:nth-child(1) { top: 35%; }
+                    &:nth-child(2) { top: 45%; }
+                    &:nth-child(3) { top: 55%; }
+                    &:nth-child(4) { top: 65%; }
 
-            }
+                    a {
+                        display: block;
 
-            .cachTitle {
+                        font-family: gothamBold;
+                        font-size: 130px;
+                        line-height: 250px;
+                        text-align: center;
+                        color: #edb551;
+                        text-decoration: none;
+                    }
 
-                overflow: hidden;
-                height: 145px;
-                width: 80%;
-                display: block;
-                margin: auto;
+                    &:before {
+                        position: absolute;
+                        width: 100%;
+                        font-size: 140px;
+                        font-family: gothamBold;
+                        text-align: center;
+                        color: $black;
+                        line-height: 210px;
+                        pointer-events: none;
+                    }
 
-                h1 {
-
-                    font-family: 'superFly';
-                    font-size: 8rem;
-                    text-transform: inherit;
-                    width: 100%;
-                    text-align: center;
-                    position: relative;
-                    opacity: 1;
-                    transform: translateX(-100%);
-
-
-                }
-
-            }
-
-
-        }
-
-
-        p {
-
-            width: 100%;
-            text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 100px;
-            opacity: 0;
-
-        }
-
-        ul {
-
-            display: flex;
-            width: 80%;
-            text-align: center;
-            margin: 50px 10% 0 10%;
-
-            li {
-
-                display: block;
-                margin: auto;
-                height: 100px;
-                width: 100px;
-                transform: scale(0);
-
-                img {
-
-                    width: 100px;
-                    height: 100px;
-                    margin: 0;
-
-
+                    &:nth-child(1):before { content: 'home'; }
+                    &:nth-child(2):before { content: 'projets'; }
+                    &:nth-child(3):before { content: 'contact'; }
+                    &:nth-child(4):before { content: 'love'; color: $pink_portfolio;  }
+                    &:nth-child(4) a { color: $pink_bg_portfolio; }
                 }
             }
-
-        }
-
-        .holiday {
-
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 700px;
-            transform: translateX(-50%) scale(0) ;
-            opacity: 0;
-
-
         }
     }
-
-}

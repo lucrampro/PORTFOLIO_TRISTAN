@@ -12,6 +12,7 @@ $('document').ready(function () {
                 width: "100%",
                 ease: Expo.easeInOut
             });
+            $(".burger").addClass("open");
 
         } else {
 
@@ -19,8 +20,8 @@ $('document').ready(function () {
                 width: "0%",
                 ease: Expo.easeInOut
             });
+            $(".burger").removeClass("open");
         }
-        $(".burger").toggleClass("open");
     });
     //    PAGE VOYAGE
 
