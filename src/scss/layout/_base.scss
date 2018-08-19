@@ -7,3 +7,11 @@
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
 }
+
+body {
+
+    font-family: 'gothamBook';
+    background: $bg_portfolio_2k18;
+    overflow: hidden;
+    height: 100%;
+}
