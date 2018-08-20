@@ -22,18 +22,6 @@
         margin: 0;
         bottom: 40px;
         z-index: 2;
-
-        text-align: center;
-        color: white;
-        font-family: "gothambold";
-
-        &:after {
-            content: '';
-            display: block;
-            background: $pink_portfolio;
-            width: 100%;
-            height: 4px;
-        }
     }
 
 
