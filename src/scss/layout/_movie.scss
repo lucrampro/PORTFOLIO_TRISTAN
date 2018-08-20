@@ -40,9 +40,13 @@
     @media screen and (min-width: $middle) {
         
         #movie-desktop { 
+            position: absolute;
             display: block; 
             min-width: 100%;
-            min-height: 56.25vw;
+            height: 100vh;
+            min-height: 56.25vw;    
+            left: 50%;
+            transform: translateX(-50%);
         }
         #movie-mobile,
         .play { display: none; }

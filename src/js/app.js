@@ -37,132 +37,101 @@
         movie();
         burger();
 
+    //    PAGE VOYAGE
 
-        //    PAGE VOYAGE
-        TweenMax.to("h1", 1, {
-            delay: 0.3,
-            x: "0",
-            opacity: "1",
-            ease: Expo.easeInOut
-        });
+    TweenMax.to(".cacheTitle h1", 0.8, {
 
-        TweenMax.to('.gostJaune', 1, {
-            delay: 0.6,
-            width: "80%",
-            ease: Expo.easeInOut,
-            onComplete: function () {
+        y: "-2%",
+        ease: Expo.easeInOut
+    });
+    TweenMax.to(".cacheJaune", 0.8, {
+        delay: 0.2,
+        width: "100%",
+        ease: Expo.easeInOut
+    });
 
-                TweenMax.to("p", 0.3, {
-                    opacity: "1",
-                    onComplete: function () {
-
-                        TweenMax.to(".USA", 0.3, {
-
-                            css: {
-                                scale: 1
-                            },
-                            ease: Back.easeOut.config(1.7)
-                        });
-
-
-                        TweenMax.to(".POLY", 0.3, {
-
-                            delay: 0.1,
-                            css: {
-                                scale: 1
-                            },
-                            ease: Back.easeOut.config(1.7)
-                        });
-
-
-                        TweenMax.to(".SUI", 0.3, {
-
-                            delay: 0.15,
-                            css: {
-                                scale: 1
-                            },
-                            ease: Back.easeOut.config(1.7)
-                        });
-
-
-                        TweenMax.to(".UK", 0.3, {
-
-                            delay: 0.20,
-                            css: {
-                                scale: 1
-                            },
-                            ease: Back.easeOut.config(1.7)
-                        });
-
-
-                        TweenMax.to(".ES", 0.3, {
-
-                            delay: 0.25,
-                            css: {
-                                scale: 1
-                            },
-                            ease: Back.easeOut.config(1.7)
-                        });
-
-                        TweenMax.to(".POR", 0.3, {
-
-                            delay: 0.30,
-                            css: {
-                                scale: 1
-                            },
-                            ease: Back.easeOut.config(1.7)
-                        });
-
-                        TweenMax.to(".PAK", 0.3, {
-
-                            delay: 0.35,
-                            css: {
-                                scale: 1
-                            },
-                            ease: Back.easeOut.config(1.7)
-                        });
-
-                        TweenMax.to(".IND", 0.3, {
-
-                            delay: 0.40,
-                            css: {
-                                scale: 1
-                            },
-                            ease: Back.easeOut.config(1.7)
-                        });
-
-                        TweenMax.to(".MALI", 0.3, {
-
-                            delay: 0.45,
-                            css: {
-                                scale: 1
-                            },
-                            ease: Back.easeOut.config(1.7)
-                        });
-
-                        TweenMax.to(".MALA", 0.3, {
-
-                            delay: 0.50,
-                            css: {
-                                scale: 1
-                            },
-                            ease: Back.easeOut.config(1.7),
-                        });
-
-                        TweenMax.to(".holiday", 0.5, {
-                            delay: 0.45,
-                            x: "-50%",
-                            scale: 1,
-                            opacity: 1,
-                            ease: Bounce.easeOut
-                        });
-
-
-
-                    }
-                });
-            }
-        });
+    TweenMax.to(".cacheP p", 0.8, {
+        delay: 0.15,
+        y: "15%",
+        ease: Expo.easeInOut,
     });
 
 
+    TweenMax.to(".USA", 0.3, {
+        css: {
+            scale: 1
+        },
+        delay: 0.55
+    });
+
+    TweenMax.to(".Polyn", 0.3, {
+        css: {
+            scale: 1
+        },
+        delay: 0.55
+    });
+    TweenMax.to(".Suisse", 0.3, {
+        css: {
+            scale: 1
+        },
+        delay: 0.65
+    });
+    TweenMax.to(".UK", 0.3, {
+        css: {
+            scale: 1
+        },
+        delay: 0.70
+    });
+    TweenMax.to(".Espagne", 0.3, {
+        css: {
+            scale: 1
+        },
+        delay: 0.75
+    });
+    TweenMax.to(".Portugal", 0.3, {
+        css: {
+            scale: 1
+        },
+        delay: 0.80
+    });
+    TweenMax.to(".Pakistan", 0.3, {
+        css: {
+            scale: 1
+        },
+        delay: 0.85
+    });
+    TweenMax.to(".India", 0.3, {
+        css: {
+            scale: 1
+        },
+        delay: 0.90
+    });
+    TweenMax.to(".Mali", 0.3, {
+        css: {
+            scale: 1
+        },
+        delay: 0.95
+
+    });
+    TweenMax.to(".Malaisie", 0.3, {
+        css: {
+            scale: 1
+        },
+        delay: 1
+    });
+
+    TweenMax.to(".me", 1, {
+        opacity: 1,
+        bottom: 0,
+        delay: 0.95
+    });
+
+
+    TweenMax.to(".fond", 0.5, {
+        opacity: 0.6,
+        delay: 1
+    });
+
+
+
+});

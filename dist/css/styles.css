@@ -60,6 +60,13 @@ h2 {
 }
 
 @font-face {
+  font-family: 'gothamUltra';
+  src: url("../fonts/GothamUltra.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "gothamBook";
   src: url("../fonts/gothamBook.woff2") format("woff2"), url("../fonts/gothamBook.woff") format("woff");
 }
@@ -106,6 +113,7 @@ h2 {
 body {
   font-family: 'gothamBook';
   background: #f7f7f7;
+  overflow-x: hidden;
 }
 
 .loader {
@@ -129,7 +137,7 @@ body {
 
 header {
   height: 50px;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 98;
 }
@@ -272,7 +280,7 @@ header .menu ul li:nth-child(4) a {
 }
 
 .burger {
-  position: absolute;
+  position: fixed;
   height: 100px;
   width: 50px;
   top: 10px;
@@ -376,12 +384,328 @@ header .menu ul li:nth-child(4) a {
 
 @media screen and (min-width: 980px) {
   .movie #movie-desktop {
+    position: absolute;
     display: block;
     min-width: 100%;
+    height: 100vh;
     min-height: 56.25vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .movie #movie-mobile,
   .movie .play {
     display: none;
+  }
+}
+
+.desc {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.desc span {
+  display: block;
+}
+
+.desc .cacheTitle {
+  position: absolute;
+  overflow: hidden;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+  width: 100%;
+  height: 50px;
+}
+
+.desc .cacheTitle h1 {
+  font-family: "superFly";
+  font-size: 3rem;
+  font-weight: normal;
+  text-transform: none;
+  z-index: 2;
+  -webkit-transform: translateY(90%);
+          transform: translateY(90%);
+}
+
+.desc .parentJaune {
+  position: absolute;
+  width: 300px;
+  top: 10%;
+  left: 50%;
+  height: 50px;
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+  z-index: -1;
+}
+
+.desc .parentJaune .cacheJaune {
+  width: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.desc .parentJaune .cacheJaune img {
+  width: 300px;
+  z-index: -1;
+}
+
+.desc .cacheP {
+  overflow: hidden;
+  height: 60px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -20%);
+          transform: translate(-50%, -20%);
+  width: 70%;
+}
+
+.desc .cacheP p {
+  font-size: 0.8rem;
+  text-align: center;
+  width: 100%;
+  -webkit-transform: translateY(125%);
+          transform: translateY(125%);
+}
+
+.desc .cacheP p .heart {
+  color: #fe9ca9;
+  display: inline-block;
+}
+
+.desc.voyage .cacheP {
+  width: 75%;
+  top: 21%;
+}
+
+.desc .icons {
+  display: table;
+  position: absolute;
+  width: 70%;
+  height: 50px;
+  left: 50%;
+}
+
+.desc .icons.line1 {
+  top: 34%;
+  -webkit-transform: translate(-50%, -38%);
+          transform: translate(-50%, -38%);
+}
+
+.desc .icons.line1 li {
+  margin: auto;
+}
+
+.desc .icons.line1 li img {
+  width: 30px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.desc .icons.line2 {
+  top: 42%;
+  -webkit-transform: translate(-50%, -38%);
+          transform: translate(-50%, -38%);
+}
+
+.desc .icons li {
+  display: table-cell;
+  margin: auto;
+  text-align: center;
+}
+
+.desc .icons li img {
+  width: 30px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.desc.voyage .line1 {
+  top: 33%;
+}
+
+.desc.voyage .line2 {
+  top: 40%;
+}
+
+.desc .me {
+  position: absolute;
+  left: 50%;
+  bottom: -5%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  opacity: 0;
+}
+
+.desc .me.dev {
+  left: 35%;
+  height: 55vh;
+}
+
+.desc .me.daddy {
+  height: 60vh;
+}
+
+.desc .me.travel {
+  height: 55vh;
+}
+
+.desc .bg-me {
+  position: absolute;
+  bottom: 0;
+  z-index: -3;
+}
+
+.desc .fond {
+  position: absolute;
+  font-family: 'gothamUltra';
+  font-size: 7rem;
+  z-index: -1;
+  color: #fefefe;
+  width: 100%;
+  text-align: center;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -80%);
+          transform: translate(-50%, -80%);
+  opacity: 0;
+}
+
+.desc .fond span {
+  line-height: 65px;
+}
+
+@media screen and (min-width: 980px) {
+  .desc .cacheTitle {
+    height: 150px;
+    left: 30%;
+    top: 33%;
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+  }
+  .desc .cacheTitle h1 {
+    font-size: 8rem;
+  }
+  .desc.dev .cacheTitle {
+    left: 65%;
+    top: 30%;
+    height: 130px;
+  }
+  .desc.voyage .cacheTitle {
+    left: 65%;
+    height: 130px;
+  }
+  .desc .cacheP {
+    height: 80px;
+    left: 47%;
+    top: 44%;
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+  }
+  .desc .cacheP p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .desc.dev .cacheP {
+    top: 41%;
+    left: 80%;
+    height: 80px;
+  }
+  .desc.dev .cacheP p span {
+    width: 55%;
+  }
+  .desc.voyage .cacheP {
+    top: 44%;
+    left: 79%;
+    height: 36px;
+  }
+  .desc.voyage .cacheP p span {
+    width: 35%;
+  }
+  .desc .parentJaune {
+    width: 660px;
+    height: 150px;
+    left: 27%;
+    top: 32%;
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+  }
+  .desc .parentJaune .cacheJaune img {
+    width: 670px;
+  }
+  .desc.daddy .parentJaune {
+    -webkit-transform: rotate(-5deg) translate(-50%, -30%);
+            transform: rotate(-5deg) translate(-50%, -30%);
+  }
+  .desc.dev .parentJaune {
+    top: 31%;
+    left: 66%;
+    width: 870px;
+  }
+  .desc.voyage .parentJaune {
+    top: 31%;
+    left: 68%;
+    width: 870px;
+  }
+  .desc.voyage .parentJaune img {
+    width: 860px;
+  }
+  .desc .me.dev {
+    height: 90vh;
+    width: auto;
+    left: 20%;
+  }
+  .desc .me.daddy {
+    left: 70%;
+    height: 90vh;
+  }
+  .desc.daddy .bg-me {
+    left: 20%;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  .desc .me.travel {
+    height: 80vh;
+    width: auto;
+    left: 21%;
+  }
+  .desc .icons li img {
+    width: 60px !important;
+  }
+  .desc .icons.line1 {
+    top: 66%;
+    left: 30%;
+    width: 50%;
+  }
+  .desc.dev .line1 {
+    left: 65%;
+  }
+  .desc.voyage .line1 {
+    left: 65%;
+    width: 40%;
+  }
+  .desc.voyage .line2 {
+    left: 65%;
+    width: 40%;
+    top: 78%;
+  }
+  .desc .fond {
+    height: 500px;
+    top: 50%;
+    left: 39%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: -4;
+    font-size: 25rem;
+    line-height: 50rem;
+  }
+  .desc.dev .fond {
+    left: 43%;
+  }
+  .desc.voyage .fond {
+    left: 50%;
   }
 }
