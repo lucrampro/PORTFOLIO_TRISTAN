@@ -1,6 +1,6 @@
-
-
-    console.log( window.performance.timing );
+var isDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+var w = $(window).width();
+var h = $(window).height();
 
     function movie() {
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -29,6 +29,22 @@
             }
         });
     }
+
+    function menuColor() {
+        $(document).scroll(function() {
+            var distance = Math.round( $(window).scrollTop() - $('.desc.dev').offset().top + ($('.menu').height() / 2) );
+
+            if( !isDevice ) {
+                if( distance < 0 ) {
+                    $('.name').removeClass('scroll');
+                    $('.menu').removeClass('scroll');
+                } else {
+                    $('.name').addClass('scroll');
+                    $('.menu').addClass('scroll');
+                }
+            }
+          });
+    }
         
 
 
@@ -36,25 +52,10 @@
 
         movie();
         burger();
+        menuColor();
 
     //    PAGE VOYAGE
 
-    TweenMax.to(".cacheTitle h1", 0.8, {
-
-        y: "-2%",
-        ease: Expo.easeInOut
-    });
-    TweenMax.to(".cacheJaune", 0.8, {
-        delay: 0.2,
-        width: "100%",
-        ease: Expo.easeInOut
-    });
-
-    TweenMax.to(".cacheP p", 0.8, {
-        delay: 0.15,
-        y: "15%",
-        ease: Expo.easeInOut,
-    });
 
 
     TweenMax.to(".USA", 0.3, {

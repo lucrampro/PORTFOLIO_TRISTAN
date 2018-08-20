@@ -192,20 +192,21 @@ header {
 
 header .name {
   position: absolute;
-  width: 400px;
+  width: 200px;
   left: 50%;
-  top: 10px;
-  margin-left: -200px;
+  top: 40px;
   z-index: 99;
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
+  -webkit-transform-origin: -100px;
+          transform-origin: -100px;
+  -webkit-transform: rotate(-15deg) translateX(-50%);
+          transform: rotate(-15deg) translateX(-50%);
   font-family: 'moonstruck';
   font-size: 100px;
   text-align: center;
 }
 
 header .menu {
-  position: absolute;
+  position: fixed;
   width: 0%;
   height: 100vh;
   top: 0;
@@ -246,12 +247,17 @@ header .menu ul li:nth-child(4) {
 
 header .menu ul li a {
   display: block;
+  z-index: -1;
   font-family: gothamBold;
   font-size: 50px;
   line-height: 220px;
   text-align: center;
   color: #edb551;
   text-decoration: none;
+}
+
+header .menu ul li a:before {
+  display: none;
 }
 
 header .menu ul li:before {
@@ -288,18 +294,34 @@ header .menu ul li:nth-child(4) a {
 
 @media screen and (min-width: 980px) {
   header .name {
+    position: fixed;
     left: 0;
-    top: 0;
-    margin-left: 0;
+    -webkit-transform: translateX(0) rotate(-15deg);
+            transform: translateX(0) rotate(-15deg);
     font-size: 90px;
     width: 150px;
     color: white;
     text-shadow: 1px 3px 1px #333333;
   }
+  header .name.scroll {
+    color: #333333;
+    text-shadow: 1px 3px 1px white;
+  }
   header .menu {
     width: 100%;
-    background: none;
+    background: -webkit-gradient(linear, left top, right top, color-stop(120%, rgba(247, 247, 247, 0)), color-stop(130%, rgba(247, 247, 247, 0.9)));
+    background: linear-gradient(left, rgba(247, 247, 247, 0) 120%, rgba(247, 247, 247, 0.9) 130%);
     height: 10vh;
+    -webkit-transition: .2s background-color ease-in-out;
+    transition: .2s background-color ease-in-out;
+  }
+  header .menu.scroll {
+    background: -webkit-gradient(linear, left top, right top, color-stop(60%, rgba(247, 247, 247, 0)), to(rgba(247, 247, 247, 0.9)));
+    background: linear-gradient(left, rgba(247, 247, 247, 0) 60%, rgba(247, 247, 247, 0.9) 100%);
+  }
+  header .menu.scroll a {
+    color: #333333;
+    text-shadow: 1px 2px 1px rgba(255, 255, 255, 0);
   }
   header .menu ul {
     position: relative;
@@ -319,11 +341,27 @@ header .menu ul li:nth-child(4) a {
   }
   header .menu ul li a {
     margin: 40px 10px;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
     color: white;
     font-size: 20px;
     line-height: initial;
     text-shadow: 1px 2px 1px #333333;
     font-family: "gothammedium";
+  }
+  header .menu ul li a:before {
+    bottom: 33%;
+    width: 0px;
+    left: -10%;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+  }
+  header .menu ul li a:hover {
+    text-shadow: none;
+  }
+  header .menu ul li a:hover:before {
+    width: 120% !important;
+    height: 4px;
   }
 }
 
