@@ -195,10 +195,10 @@
         }
         &.voyage .cacheP {
             top: 44%;
-            left: 79%;
+            left: 68%;
             height: 36px;
-
-            p span { width: 35%; }
+            width: 870px;
+            padding-left: 70px;
 
         }
         .parentJaune {
@@ -218,12 +218,12 @@
             transform: rotate(-5deg) translate(-50%, -30%);
         }
         
-        &.dev .parentJaune, {
+        &.dev .parentJaune {
             top: 31%;
             left: 66%;
             width: 870px;
         }
-        &.voyage .parentJaune, {
+        &.voyage .parentJaune {
             top: 31%;
             left: 68%;
             width: 870px;

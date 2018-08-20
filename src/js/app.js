@@ -45,6 +45,62 @@ var h = $(window).height();
             }
           });
     }
+
+    function showDesc() {
+        var v = h / 1.5;
+        var devLaunch,
+            dadLaunch,
+            voyLaunch = false;
+
+        function initDesc(n) {
+
+            TweenMax.to( "." + n + " .cacheTitle h1", 0.8, {
+                y: "-2%",
+                ease: Expo.easeInOut
+            });
+            TweenMax.to( "." + n + " .cacheJaune", 0.8, {
+                delay: 0.2,
+                width: "100%",
+                ease: Expo.easeInOut
+            });
+            TweenMax.to( "." + n + " .cacheP p", 0.8, {
+                delay: 0.15,
+                y: "15%",
+                ease: Expo.easeInOut,
+            });
+
+            TweenMax.to( "." + n + " .me", 1, {
+                opacity: 1,
+                bottom: 0,
+                delay: 0.95
+            });
+        
+            TweenMax.to( "." + n + " .fond", 0.5, {
+                opacity: 0.6,
+                delay: 1
+            });
+        }
+
+        $(document).scroll(function() {
+            var distDev = Math.round( $(window).scrollTop() - $('.desc.dev').offset().top + v );
+            var distDad = Math.round( $(window).scrollTop() - $('.desc.daddy').offset().top + v );
+            var distVoy = Math.round( $(window).scrollTop() - $('.desc.voyage').offset().top + v );
+            console.log(distDev, distDad, distVoy);
+
+            if( distDev > 0 && !devLaunch ) {
+                initDesc('dev');
+                devLaunch = true;
+            }
+            if( distDad > 0 && !dadLaunch ) {
+                initDesc('daddy');
+                dadLaunch = true;
+            }
+            if( distVoy > 0 && !voyLaunch) {
+                initDesc('voyage');
+                voyLaunch = true;
+            }
+        });
+    }
         
 
 
@@ -53,6 +109,7 @@ var h = $(window).height();
         movie();
         burger();
         menuColor();
+        showDesc();
 
     //    PAGE VOYAGE
 
@@ -121,17 +178,7 @@ var h = $(window).height();
         delay: 1
     });
 
-    TweenMax.to(".me", 1, {
-        opacity: 1,
-        bottom: 0,
-        delay: 0.95
-    });
 
-
-    TweenMax.to(".fond", 0.5, {
-        opacity: 0.6,
-        delay: 1
-    });
 
 
 

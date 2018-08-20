@@ -158,9 +158,13 @@ a:before {
             box-shadow: none;
     padding: 0;
     left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   a:hover:before {
     height: 30px;
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
 }
 
@@ -767,11 +771,10 @@ footer span {
   }
   .desc.voyage .cacheP {
     top: 44%;
-    left: 79%;
+    left: 68%;
     height: 36px;
-  }
-  .desc.voyage .cacheP p span {
-    width: 35%;
+    width: 870px;
+    padding-left: 70px;
   }
   .desc .parentJaune {
     width: 660px;
