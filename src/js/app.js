@@ -31,19 +31,21 @@ var h = $(window).height();
     }
 
     function menuColor() {
-        $(document).scroll(function() {
-            var distance = Math.round( $(window).scrollTop() - $('.desc.dev').offset().top + ($('.menu').height() / 2) );
+        if( !$('body').hasClass('projets') ) {
+            $(document).scroll(function() {
+                var distance = Math.round( $(window).scrollTop() - $('.desc.dev').offset().top + ($('.menu').height() / 2) );
 
-            if( !isDevice ) {
-                if( distance < 0 ) {
-                    $('.name').removeClass('scroll');
-                    $('.menu').removeClass('scroll');
-                } else {
-                    $('.name').addClass('scroll');
-                    $('.menu').addClass('scroll');
+                if( !isDevice ) {
+                    if( distance < 0 ) {
+                        $('.name').removeClass('scroll');
+                        $('.menu').removeClass('scroll');
+                    } else {
+                        $('.name').addClass('scroll');
+                        $('.menu').addClass('scroll');
+                    }
                 }
-            }
-          });
+            });
+        }
     }
 
     function pauseMovie() {
@@ -56,6 +58,7 @@ var h = $(window).height();
     }
 
     function showDesc() {
+        
         var v = h / 1.5;
         var devLaunch,
             dadLaunch,
@@ -122,25 +125,60 @@ var h = $(window).height();
             });
         }
 
-        $(document).scroll(function() {
-            var distDev = Math.round( $(window).scrollTop() - $('.desc.dev').offset().top + v );
-            var distDad = Math.round( $(window).scrollTop() - $('.desc.daddy').offset().top + v );
-            var distVoy = Math.round( $(window).scrollTop() - $('.desc.voyage').offset().top + v );
-            console.log(distDev, distDad, distVoy);
 
-            if( distDev > 0 && !devLaunch ) {
-                initDesc('dev');
-                devLaunch = true;
-            }
-            if( distDad > 0 && !dadLaunch ) {
-                initDesc('daddy');
-                dadLaunch = true;
-            }
-            if( distVoy > 0 && !voyLaunch) {
-                initDesc('voyage');
-                voyLaunch = true;
-            }
-        });
+        if( !$('body').hasClass('projets') ) {
+
+            $(document).scroll(function() {
+                var distDev = Math.round( $(window).scrollTop() - $('.desc.dev').offset().top + v );
+                var distDad = Math.round( $(window).scrollTop() - $('.desc.daddy').offset().top + v );
+                var distVoy = Math.round( $(window).scrollTop() - $('.desc.voyage').offset().top + v );
+                console.log(distDev, distDad, distVoy);
+    
+                if( distDev > 0 && !devLaunch ) {
+                    initDesc('dev');
+                    devLaunch = true;
+                }
+                if( distDad > 0 && !dadLaunch ) {
+                    initDesc('daddy');
+                    dadLaunch = true;
+                }
+                if( distVoy > 0 && !voyLaunch) {
+                    initDesc('voyage');
+                    voyLaunch = true;
+                }
+            });
+        }
+    }
+
+    function lockMovie() {
+
+        if ( isDevice ) {
+
+            $('.movie .play').click(function() {
+                $('.iframe').addClass('show');
+            })
+
+            $('.iframe .close').click(function() {
+                $('.iframe').removeClass('show');
+            })
+        } 
+
+    }
+
+    function projects() {
+
+        function showList(n) {
+            $('.projet.p' + n).click(function() {
+                $('.list').attr('class', 'list p' + n);
+            })
+        }
+
+        showList(1);
+        showList(2);
+        showList(3);
+        showList(4);
+        showList(5);
+
     }
         
 
@@ -152,5 +190,7 @@ var h = $(window).height();
         burger();
         menuColor();
         showDesc();
+        // lockMovie();
+        projects();
 
     });
