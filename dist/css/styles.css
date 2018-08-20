@@ -166,6 +166,7 @@ a:before {
     -webkit-transform: rotate(-2deg);
             transform: rotate(-2deg);
   }
+<<<<<<< HEAD
 }
 
 .loader {
@@ -187,6 +188,29 @@ a:before {
   font-family: "gothamBold";
 }
 
+=======
+}
+
+.loader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #f7f7f7;
+  z-index: 100;
+}
+
+.loader #percent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20rem;
+  color: #ffce71;
+  font-family: "gothamBold";
+}
+
+>>>>>>> tristan
 header {
   height: 50px;
   position: absolute;
@@ -503,6 +527,7 @@ footer span {
     font-size: 20rem;
     width: 100vw;
   }
+<<<<<<< HEAD
 }
 
 .projet {
@@ -668,18 +693,119 @@ footer span {
   .movie .play {
     display: none;
   }
+=======
+}
+
+.movie {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.movie #movie-mobile {
+  display: block;
+  overflow: hidden;
+  margin-left: 50%;
+  height: 100vh;
+  margin-top: 0px;
+  -webkit-transform: translateX(-50%) scale(1.1);
+          transform: translateX(-50%) scale(1.1);
+}
+
+.movie #movie-desktop {
+  display: none;
+}
+
+.movie .play {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0;
+  bottom: 40px;
+  z-index: 2;
+}
+
+@media screen and (min-width: 980px) {
+  .movie #movie-desktop {
+    position: absolute;
+    display: block;
+    min-width: 100%;
+    height: 100vh;
+    min-height: 56.25vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .movie #movie-mobile,
+  .movie .play {
+    display: none;
+  }
+}
+
+.iframe {
+  overflow: hidden;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+
+.iframe.show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.iframe .close {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: -30px;
+  bottom: -30px;
+  background: #ed5962;
+  z-index: 2;
+  color: white;
+  font-size: 50px;
+  line-height: 90px;
+  border-radius: 100%;
+  text-align: center;
+}
+
+.iframe .youtube {
+  z-index: 1;
+}
+
+.iframe .youtube.show {
+  display: block;
+>>>>>>> tristan
 }
 
 .desc {
   height: 100vh;
   position: relative;
   overflow: hidden;
+<<<<<<< HEAD
 }
 
 .desc span {
   display: block;
 }
 
+=======
+}
+
+.desc span {
+  display: block;
+}
+
+>>>>>>> tristan
 .desc .cacheTitle {
   position: absolute;
   overflow: hidden;
@@ -710,6 +836,7 @@ footer span {
   -webkit-transform: translate(-50%, -20%);
           transform: translate(-50%, -20%);
   z-index: -1;
+<<<<<<< HEAD
 }
 
 .desc .parentJaune .cacheJaune {
@@ -718,6 +845,16 @@ footer span {
   height: 100%;
 }
 
+=======
+}
+
+.desc .parentJaune .cacheJaune {
+  width: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+>>>>>>> tristan
 .desc .parentJaune .cacheJaune img {
   width: 300px;
   z-index: -1;
@@ -780,6 +917,7 @@ footer span {
   top: 42%;
   -webkit-transform: translate(-50%, -38%);
           transform: translate(-50%, -38%);
+<<<<<<< HEAD
 }
 
 .desc .icons li {
@@ -802,6 +940,30 @@ footer span {
   top: 40%;
 }
 
+=======
+}
+
+.desc .icons li {
+  display: table-cell;
+  margin: auto;
+  text-align: center;
+}
+
+.desc .icons li img {
+  width: 30px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.desc.voyage .line1 {
+  top: 33%;
+}
+
+.desc.voyage .line2 {
+  top: 40%;
+}
+
+>>>>>>> tristan
 .desc .me {
   position: absolute;
   left: 50%;
@@ -870,12 +1032,29 @@ footer span {
     height: 130px;
   }
   .desc .cacheP {
+<<<<<<< HEAD
+=======
     height: 80px;
     left: 47%;
     top: 44%;
     -webkit-transform: translate(-50%, -30%);
             transform: translate(-50%, -30%);
   }
+  .desc .cacheP p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .desc.dev .cacheP {
+    top: 41%;
+    left: 80%;
+>>>>>>> tristan
+    height: 80px;
+    left: 47%;
+    top: 44%;
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+  }
+<<<<<<< HEAD
   .desc .cacheP p {
     font-size: 1.5rem;
     text-align: left;
@@ -977,5 +1156,283 @@ footer span {
   }
   .desc.voyage .fond {
     left: 50%;
+=======
+  .desc.dev .cacheP p span {
+    width: 55%;
+  }
+  .desc.voyage .cacheP {
+    top: 44%;
+    left: 68%;
+    height: 36px;
+    width: 870px;
+    padding-left: 70px;
+  }
+  .desc .parentJaune {
+    width: 660px;
+    height: 150px;
+    left: 27%;
+    top: 32%;
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+  }
+  .desc .parentJaune .cacheJaune img {
+    width: 670px;
+  }
+  .desc.daddy .parentJaune {
+    -webkit-transform: rotate(-5deg) translate(-50%, -30%);
+            transform: rotate(-5deg) translate(-50%, -30%);
+  }
+  .desc.dev .parentJaune {
+    top: 31%;
+    left: 66%;
+    width: 870px;
+  }
+  .desc.voyage .parentJaune {
+    top: 31%;
+    left: 68%;
+    width: 870px;
+  }
+  .desc.voyage .parentJaune img {
+    width: 860px;
+  }
+  .desc .me.dev {
+    height: 90vh;
+    width: auto;
+    left: 20%;
+  }
+  .desc .me.daddy {
+    left: 70%;
+    height: 90vh;
+  }
+  .desc.daddy .bg-me {
+    left: 20%;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  .desc .me.travel {
+    height: 90vh;
+    width: auto;
+    left: 21%;
+  }
+  .desc .icons li img {
+    width: 60px !important;
+  }
+  .desc .icons.line1 {
+    top: 66%;
+    left: 30%;
+    width: 50%;
+  }
+  .desc.dev .line1 {
+    left: 65%;
+  }
+  .desc.voyage .line1 {
+    left: 65%;
+    width: 40%;
+  }
+  .desc.voyage .line2 {
+    left: 65%;
+    width: 40%;
+    top: 78%;
+  }
+  .desc.voyage .bg-me {
+    width: 100%;
+    left: 0%;
+  }
+  .desc .fond {
+    height: 500px;
+    top: 50%;
+    left: 39%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: -4;
+    font-size: 25rem;
+    line-height: 50rem;
+  }
+  .desc.dev .fond {
+    left: 43%;
+  }
+  .desc.voyage .fond {
+    left: 50%;
+  }
+}
+
+.projets {
+  background: #e7e7e7;
+}
+
+.projets .list {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.projets .list.p1 li:nth-child(1),
+.projets .list.p1 li:nth-child(3) {
+  width: 15vw;
+}
+
+.projets .list.p1 li:nth-child(2) {
+  width: 70vw;
+}
+
+.projets .list.p1 li:nth-child(2) .number {
+  font-size: 150rem;
+  width: auto;
+}
+
+.projets .list.p2 li:nth-child(1) {
+  width: 0vw;
+}
+
+.projets .list.p2 li:nth-child(2),
+.projets .list.p2 li:nth-child(4) {
+  width: 15vw;
+}
+
+.projets .list.p2 li:nth-child(3) {
+  width: 70vw;
+}
+
+.projets .list.p2 li:nth-child(3) .number {
+  font-size: 150rem;
+  width: auto;
+}
+
+.projets .list.p3 li:nth-child(0),
+.projets .list.p3 li:nth-child(1),
+.projets .list.p3 li:nth-child(2) {
+  width: 0vw;
+}
+
+.projets .list.p3 li:nth-child(3),
+.projets .list.p3 li:nth-child(5) {
+  width: 15vw;
+}
+
+.projets .list.p3 li:nth-child(4) {
+  width: 70vw;
+}
+
+.projets .list.p3 li:nth-child(4) .number {
+  font-size: 150rem;
+  width: auto;
+}
+
+.projets .list.p4 li:nth-child(0),
+.projets .list.p4 li:nth-child(1),
+.projets .list.p4 li:nth-child(2),
+.projets .list.p4 li:nth-child(3) {
+  width: 0vw;
+}
+
+.projets .list.p4 li:nth-child(4),
+.projets .list.p4 li:nth-child(6) {
+  width: 15vw;
+}
+
+.projets .list.p4 li:nth-child(5) {
+  width: 70vw;
+}
+
+.projets .list.p4 li:nth-child(5) .number {
+  font-size: 150rem;
+  width: auto;
+}
+
+.projets .list.p5 li:nth-child(0),
+.projets .list.p5 li:nth-child(1),
+.projets .list.p5 li:nth-child(2),
+.projets .list.p5 li:nth-child(3),
+.projets .list.p5 li:nth-child(4) {
+  width: 0vw;
+}
+
+.projets .list.p5 li:nth-child(5) {
+  width: 15vw;
+}
+
+.projets .list.p5 li:nth-child(6) {
+  width: 70vw;
+}
+
+.projets .list.p5 li:nth-child(7) {
+  width: 15vw;
+}
+
+.projets .list .projet {
+  position: relative;
+  display: table-cell;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.projets .list .projet .number {
+  position: absolute;
+  font-family: "gothamBold";
+  font-size: 20rem;
+  text-align: center;
+  width: auto;
+  color: #fefefe;
+  -webkit-transform: translate(-50%, -50%) scale(0.3);
+          transform: translate(-50%, -50%) scale(0.3);
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.projets .list .projet .number.nbfront {
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+}
+
+.projets .list .projet .number.nbshadow {
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+}
+
+.projets .list .projet .logo {
+  position: absolute;
+  left: 51%;
+  bottom: 31%;
+  -webkit-transform: translate(-20%, -50%);
+          transform: translate(-20%, -50%);
+  width: 150px;
+  height: 200px;
+}
+
+.projets .list .projet .logo .cacheLogo {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  background: #fefefe;
+  opacity: 0;
+}
+
+.projets .list .projet .logo .cacheLogo img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 120px;
+}
+
+@media screen and (min-width: 980px) {
+  .projets .menu {
+    background: none !important;
+>>>>>>> tristan
   }
 }
