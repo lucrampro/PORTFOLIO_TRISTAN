@@ -505,6 +505,93 @@ footer span {
   }
 }
 
+.projet {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background-color: #f7f7f7;
+}
+
+.projet .number {
+  position: absolute;
+  font-family: "gothamBold";
+  font-size: 20rem;
+  text-align: center;
+  width: 200px;
+  color: #fefefe;
+  -webkit-transform: translate(-50%, -50%) scale(0.3);
+          transform: translate(-50%, -50%) scale(0.3);
+}
+
+.projet .number.nbfront {
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+}
+
+.projet .number.nbshadow {
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+}
+
+.projet .logo {
+  position: absolute;
+  left: 51%;
+  bottom: 31%;
+  -webkit-transform: translate(-20%, -50%);
+          transform: translate(-20%, -50%);
+  width: 150px;
+  height: 200px;
+}
+
+.projet .logo .cacheLogo2 {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  background: #fefefe;
+  opacity: 0;
+}
+
+.projet .logo .cacheLogo2 img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 120px;
+}
+
+.projet .logo.p3 {
+  left: 23%;
+}
+
+.projet .logo.p3 .cacheLogo3 {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  background: #fefefe;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  opacity: 0;
+}
+
+.projet .logo.p3 .cacheLogo3 img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 120px;
+}
+
 .movie {
   overflow: hidden;
   width: 100vw;
