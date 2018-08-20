@@ -1,0 +1,22 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+h1{
+	font-size: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 300;
+}
+h2{
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+
+@font-face {
+    font-family: 'peugeot';
+    src: url('../fonts/peugeot_regular') format('ttf');
+    font-weight: normal;
+}

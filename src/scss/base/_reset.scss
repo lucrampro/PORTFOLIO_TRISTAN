@@ -1,0 +1,15 @@
+@viewport { width: device-width; }
+
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li, form, input, textarea, article, aside, footer, header, nav, section{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, footer, header, nav, section {display: block;}
+ol, ul {list-style: none;}
+*{ box-sizing: border-box; }
+li{ display: inline-block; }

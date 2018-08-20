@@ -1,0 +1,122 @@
+
+
+    main {
+        padding-top: 100px;
+
+
+        .jaune {
+
+            .gostJaune {
+
+                overflow: hidden;
+                position: absolute;
+                left: 50%;
+                margin-left: -40%;
+                width: 0;
+
+                img { width: 800px; }
+
+            }
+
+            .cachTitle {
+
+                overflow: hidden;
+                height: 145px;
+                width: 80%;
+                display: block;
+                margin: auto;
+
+                h1 {
+
+                    font-family: 'superFly';
+                    font-size: 8rem;
+                    text-transform: inherit;
+                    width: 100%;
+                    text-align: center;
+                    position: relative;
+                    opacity: 1;
+                    transform: translateX(-100%);
+
+
+                }
+
+            }
+
+
+        }
+
+
+        p {
+
+            width: 100%;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 100px;
+            opacity: 0;
+
+        }
+
+        ul {
+
+            display: flex;
+            width: 80%;
+            text-align: center;
+            margin: 50px 10% 0 10%;
+
+            li {
+
+                display: block;
+                margin: auto;
+                height: 100px;
+                width: 100px;
+                transform: scale(0);
+
+                img {
+
+                    width: 100px;
+                    height: 100px;
+                    margin: 0;
+
+
+                }
+            }
+
+        }
+
+        .holiday {
+
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 700px;
+            transform: translateX(-50%) scale(0) ;
+            opacity: 0;
+
+
+        }
+    }
+
+//     <div class="jaune">
+//     <div class="gostJaune"><img src="img/Jaune.png" alt=""></div><div class="cachTitle">
+//     <h1>Voyageur agguéri</h1></div>
+// </div> 
+
+// <p>Mon bronzage témoigne pour moi...</p>
+// <ul>
+    
+//     <li class="USA" ><img src="img/USA.png" alt=""></li>
+//     <li class="POLY" ><img src="img/Polyn%C3%A9sie%20Fran%C3%A7aise.png" alt=""></li>
+//     <li class="SUI" ><img src="img/Suisse.png" alt=""></li>
+//     <li class="UK" ><img src="img/UK.png" alt=""></li>
+//     <li class="ES" ><img src="img/Espagne.png" alt=""></li>
+    
+// </ul>    <ul>
+    
+//     <li class="POR" ><img src="img/Portugal.png" alt=""></li>
+//     <li class="PAK" ><img src="img/Pakistan.png" alt=""></li>
+//     <li class="IND" ><img src="img/India.png" alt=""></li>
+//     <li class="MALI" ><img src="img/Mali.png" alt=""></li>>
+//     <li class="MALA" ><img src="img/Malaisie.png" alt=""></li>
+    
+// </ul>
+// <img class="holiday" src="img/Me%20Holidays.png" alt="">

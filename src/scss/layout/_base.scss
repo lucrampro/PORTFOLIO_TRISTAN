@@ -1,0 +1,69 @@
+* {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+body {
+  font-family: 'gothamBook';
+  background: $bg_portfolio;
+  overflow-x: hidden;
+}
+
+
+
+a {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  z-index: 1;
+
+  color: white;
+  text-align: center;
+  font-family: "gothambold";
+  text-decoration: none;
+  line-height: 30px;
+  transition: .1s ease-in-out;
+
+  &:before {
+      content: '';
+      width: 100%;
+      padding: 0 4px;
+      left: -2px;
+      height: 24px;
+      position: absolute;
+      z-index: -1;
+      bottom: 2px;
+      transition: .1s ease-in-out;
+      background: $pink_bg_portfolio;
+      box-shadow: 4px 4px 0px $pink_bg_portfolio2;
+  }
+
+  @media screen and (min-width: $middle) {
+
+    margin: 2px 0;
+    font-size: 1.2rem;
+
+    &:before {
+      bottom: 0;
+      height: 4px;
+      box-shadow: none;
+      padding: 0;
+      left: 0;
+      transform: rotate(0deg);
+    }
+    &:hover {
+
+      &:before { 
+        height: 30px; 
+        transform: rotate(-2deg);
+      }
+    }
+  
+  }
+}
+
