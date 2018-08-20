@@ -46,6 +46,15 @@ var h = $(window).height();
           });
     }
 
+    function pauseMovie() {
+        $(document).scroll(function() {
+            if( !isDevice ) {
+                if( $(window).scrollTop() != 0 ) $('#movie-desktop').get(0).pause();
+                else $('#movie-desktop').get(0).play();
+            }
+        });
+    }
+
     function showDesc() {
         var v = h / 1.5;
         var devLaunch,
@@ -72,12 +81,44 @@ var h = $(window).height();
             TweenMax.to( "." + n + " .me", 1, {
                 opacity: 1,
                 bottom: 0,
-                delay: 0.95
+                delay: 0.4
             });
         
             TweenMax.to( "." + n + " .fond", 0.5, {
                 opacity: 0.6,
                 delay: 1
+            });
+
+            TweenMax.to("." + n + " .icons li:nth-child(1) img", 0.3, {
+                css: {
+                    scale: 1
+                },
+                delay: 0.55
+            });
+        
+            TweenMax.to("." + n + " .icons li:nth-child(2) img", 0.3, {
+                css: {
+                    scale: 1
+                },
+                delay: 0.55
+            });
+            TweenMax.to("." + n + " .icons li:nth-child(3) img", 0.3, {
+                css: {
+                    scale: 1
+                },
+                delay: 0.65
+            });
+            TweenMax.to("." + n + " .icons li:nth-child(4) img", 0.3, {
+                css: {
+                    scale: 1
+                },
+                delay: 0.70
+            });
+            TweenMax.to("." + n + " .icons li:nth-child(5) img", 0.3, {
+                css: {
+                    scale: 1
+                },
+                delay: 0.75
             });
         }
 
@@ -107,79 +148,9 @@ var h = $(window).height();
     $('document').ready(function () {
 
         movie();
+        // pauseMovie();
         burger();
         menuColor();
         showDesc();
 
-    //    PAGE VOYAGE
-
-
-
-    TweenMax.to(".USA", 0.3, {
-        css: {
-            scale: 1
-        },
-        delay: 0.55
     });
-
-    TweenMax.to(".Polyn", 0.3, {
-        css: {
-            scale: 1
-        },
-        delay: 0.55
-    });
-    TweenMax.to(".Suisse", 0.3, {
-        css: {
-            scale: 1
-        },
-        delay: 0.65
-    });
-    TweenMax.to(".UK", 0.3, {
-        css: {
-            scale: 1
-        },
-        delay: 0.70
-    });
-    TweenMax.to(".Espagne", 0.3, {
-        css: {
-            scale: 1
-        },
-        delay: 0.75
-    });
-    TweenMax.to(".Portugal", 0.3, {
-        css: {
-            scale: 1
-        },
-        delay: 0.80
-    });
-    TweenMax.to(".Pakistan", 0.3, {
-        css: {
-            scale: 1
-        },
-        delay: 0.85
-    });
-    TweenMax.to(".India", 0.3, {
-        css: {
-            scale: 1
-        },
-        delay: 0.90
-    });
-    TweenMax.to(".Mali", 0.3, {
-        css: {
-            scale: 1
-        },
-        delay: 0.95
-
-    });
-    TweenMax.to(".Malaisie", 0.3, {
-        css: {
-            scale: 1
-        },
-        delay: 1
-    });
-
-
-
-
-
-});

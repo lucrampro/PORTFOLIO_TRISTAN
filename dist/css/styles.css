@@ -344,7 +344,7 @@ header .menu ul li:nth-child(4) a {
     display: none;
   }
   header .menu ul li a {
-    margin: 40px 10px;
+    padding: 40px 10px;
     -webkit-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
     color: white;
@@ -352,6 +352,7 @@ header .menu ul li:nth-child(4) a {
     line-height: initial;
     text-shadow: 1px 2px 1px #333333;
     font-family: "gothammedium";
+    z-index: 0;
   }
   header .menu ul li a:before {
     bottom: 33%;
@@ -362,6 +363,7 @@ header .menu ul li:nth-child(4) a {
   }
   header .menu ul li a:hover {
     text-shadow: none;
+    color: #fe9ca9;
   }
   header .menu ul li a:hover:before {
     width: 120% !important;
@@ -819,7 +821,7 @@ footer span {
             transform: scaleX(-1);
   }
   .desc .me.travel {
-    height: 80vh;
+    height: 90vh;
     width: auto;
     left: 21%;
   }
