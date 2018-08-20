@@ -15,25 +15,18 @@
         color: $white;
         transform: translate(-50%, -50%) scale(0.3);
 
-
         &.nbfront {
 
             left: 50%;
             top: 50%;
             z-index: 2;
-
-
         }
-
         &.nbshadow {
 
             left: 50%;
             top: 50%;
             opacity: 0;
-
-
         }
-
     } //    LOGO
     .logo {
         position: absolute;
@@ -59,16 +52,13 @@
                 top: 50%;
                 transform: translate(-50%, -50%);
                 width: 120px;
-
-
             }
-
         }
-
+        
         &.p3 {
-                
+
             left: 23%;
-            
+
             .cacheLogo3 {
 
                 width: 100%;
@@ -85,16 +75,44 @@
                     top: 50%;
                     transform: translate(-50%, -50%);
                     width: 120px;
-
-
                 }
-
-
             }
+        }
+    }
+    
+    .cacheDate {
 
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
 
+            p {
+
+                font-family: "gothamBold";
+                transform: translateY(100%);
+                opacity: 0;
+                color: $greyish;
+                
+                &::before{
+                    
+                    content: "";
+                    background: $greyish;
+                    display: block;
+                    height: 5px;
+                    width: 20px;
+                    margin: auto;
+                    margin-bottom: 2px;
+                    border-radius: 10px;
+                    
+                    
+                }
+            }
 
         }
 
-    }
+
 }

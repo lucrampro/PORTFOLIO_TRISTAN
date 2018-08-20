@@ -21,21 +21,32 @@ TweenMax.to(".nbfront", 0.5, {
             opacity: 1,
             onComplete: function () {
 
-                TweenMax.to(".cacheLogo2" , 1.5, {
-                    
+                TweenMax.to(".cacheLogo2", 1.5, {
+
                     rotation: "0",
-                    opacity:1,
+                    opacity: 1,
                     ease: Elastic.easeOut.config(1, 0.3)
                 });
-                TweenMax.to(".cacheLogo3" , 1.5, {
-                    
+                TweenMax.to(".cacheLogo3", 1, {
+
                     rotation: "0",
-                    opacity:1,
-                    ease: Elastic.easeOut.config(1, 0.3)
+                    opacity: 1,
+                    ease: Elastic.easeOut.config(1, 0.3),
+                    onComplete: function () {
+
+                        TweenMax.to(".cacheDate p", 1, {
+
+                            y: 0,
+                            opacity: 1
+
+                        });
+
+
+                    }
                 });
+
             }
         });
-
 
 
 
