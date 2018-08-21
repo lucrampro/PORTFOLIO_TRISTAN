@@ -16,13 +16,13 @@ var h = $(window).height();
             
             if ($(".menu").width() === 0) {
                 TweenMax.to(".menu", 1, {
-                    width: "100%",
+                    width: "100vw",
                     ease: Expo.easeInOut
                 });
                 $(".burger").addClass("open");
             } else {
                 TweenMax.to(".menu", 1, {
-                    width: "0%",
+                    width: "0vw",
                     ease: Expo.easeInOut
                 });
                 $(".burger").removeClass("open");
@@ -166,13 +166,100 @@ var h = $(window).height();
     }
 
     function projects() {
+        var showList;
+
+        function showProject(m) {
+
+
+            TweenMax.to(".projet.p" + m + " .number ", 1, {
+                delay: 0.2,
+                css: { scale: 3 },
+                ease: Elastic.easeOut.config(1, 0.4)
+            });
+            
+            TweenMax.to(".projet.p" + m + " .nbshadow", 1, {
+                delay: .5,
+                left: "51%",
+                top: "51%",
+                ease: Expo.easeInOut,
+                // A Link
+                onComplete:function(){
+                    if( m === 1 ) $('.projet.p' + m + ' a').attr('href', 'p-psa.html');
+                    else if( m === 2 ) $('.projet.p' + m + ' a').attr('href', 'p-coachy.html');
+                    else if( m === 3 ) $('.projet.p' + m + ' a').attr('href', 'p-cream.html');
+                    else if( m === 4 ) $('.projet.p' + m + ' a').attr('href', 'p-fff.html');
+                    else if( m === 5 ) $('.projet.p' + m + ' a').attr('href', 'p-youphil.html');
+                } 
+            });
+    
+            TweenMax.to(".projet.p" + m + " .cacheLogo", 2, {
+                delay: 1.2,
+                rotation: "0",
+                opacity: 0.9,
+                ease: Elastic.easeOut.config(1, 0.3)
+            });
+
+            TweenMax.to(".projet.p" + m + " .cachedate span", 2, {
+                delay: .8,
+                opacity: 1,
+                ease: Expo.easeInOut
+            });
+        }
+
+        function reverse(n) {
+
+            var m = n - 1;
+            var v = n + 1;
+    
+            TweenMax.to(".projet.p" + m + " .cacheLogo", .1, {
+                rotation: "100",
+                opacity: 0
+            });
+            TweenMax.to(".projet.p" + v + " .cacheLogo", .1, {
+                rotation: "100",
+                opacity: 0
+            });
+
+            TweenMax.to(".projet.p" + m + " .number ", 1, {
+                css: { scale: 1 },
+                ease: Elastic.easeOut.config(1, 0.4)
+            });
+            TweenMax.to(".projet.p" + v + " .number ", 1, {
+                css: { scale: 1 },
+                ease: Elastic.easeOut.config(1, 0.4)
+            });
+            
+            TweenMax.to(".projet.p" + m + " .nbshadow", 1, {
+                left: "50%",
+                top: "50%",
+                ease: Expo.easeInOut,
+            });
+            TweenMax.to(".projet.p" + v + " .nbshadow", 1, {
+                left: "50%",
+                top: "50%",
+                ease: Expo.easeInOut,
+            });
+            TweenMax.to(".projet.p" + m + " .cachedate span", .3, {
+                opacity: 0
+            });
+            TweenMax.to(".projet.p" + v + " .cachedate span", .3, {
+                opacity: 0
+            });
+
+            // A Link remove
+            $('.projet.p' + m + ' a').removeAttr("href");
+            $('.projet.p' + v + ' a').removeAttr("href");
+        }
 
         function showList(n) {
             $('.projet.p' + n).click(function() {
                 $('.list').attr('class', 'list p' + n);
+                showProject(n);
+                reverse(n);
             })
         }
 
+        showProject(1);
         showList(1);
         showList(2);
         showList(3);
@@ -180,19 +267,196 @@ var h = $(window).height();
         showList(5);
 
     }
+
+    function projet() {
+
+        // TweenMax.to(".list .projet.p2 .circle", 1, {
+        //     css: { scale: 2000 },
+        //     ease: Expo.easeInOut
+        // });
+    }
+
+    function barba() {
+
+        var FadeTransition = Barba.BaseTransition.extend({
+            start: function() {
+            /**
+             * This function is automatically called as soon the Transition starts
+             * this.newContainerLoading is a Promise for the loading of the new container
+             * (Barba.js also comes with an handy Promise polyfill!)
+             */
         
+            // As soon the loading is finished and the old page is faded out, let's fade the new page
+            Promise
+                .all([this.newContainerLoading, this.fadeOut()])
+                .then(this.fadeIn.bind(this));
+            },
+        
+            fadeOut: function() {
+            /**
+             * this.oldContainer is the HTMLElement of the old Container
+             */
+        
+            return $(this.oldContainer).animate({ opacity: 0 }).promise();
+            return TweenMax.to(".list .projet.p1 .circle", 1, {
+                    css: { scale: 2000 },
+                    x: '-50%',
+                    y: '-50%',
+                    ease: Expo.easeInOut
+                }).promise();
+            },
+        
+            fadeIn: function() {
+            /**
+             * this.newContainer is the HTMLElement of the new Container
+             * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
+             * Please note, newContainer is available just after newContainerLoading is resolved!
+             */
+        
+            var _this = this;
+            var $el = $(this.newContainer);
+        
+            $(this.oldContainer).hide();
+        
+            $el.css({
+                visibility : 'visible',
+                opacity : 0
+            });
+
+        
+            $el.animate({ opacity: 1 }, 0.001, function() {
+                /**
+                 * Do not forget to call .done() as soon your transition is finished!
+                 * .done() will automatically remove from the DOM the old Container
+                 */
+        
+                _this.done();
+            });
+            }
+        });
+        
+        Barba.Pjax.getTransition = function() {
+            /**
+             * Here you can use your own logic!
+             * For example you can use different Transition based on the current page or link...
+             */
 
 
-    $('document').ready(function () {
+            console.log( Barba.HistoryManager.history );
 
+            // if (FromHomeSlider.valid()) {
+            //     return FromHomeSlider;
+            // }
+
+            // if (PortfolioToCaseStudy.valid()) {
+            //     return PortfolioToCaseStudy;
+            // }
+
+            // if (CaseStudyReadMore.valid()) {
+            //     return CaseStudyReadMore;
+            // }
+
+            // if (CaseStudySibling.valid()) {
+            //     return CaseStudySibling;
+            // }
+
+            return FadeTransition;
+
+        };
+
+        var bProjets = Barba.BaseView.extend({
+            namespace: 'projets',
+            onEnter: function() {
+                console.log('b_Projets > onEnterCompleted');
+                TweenMax.to(".list .projet.p1 .circle", 10, {
+                    css: { scale: 2000 },
+                    x: '-50%',
+                    y: '-50%',
+                    ease: Expo.easeInOut,
+                    onComplete: function() {
+                        console.log('complete');
+                    }
+                });
+            },
+            onEnterCompleted: function() {
+                console.log('b_Projets > onEnterCompleted');
+            },
+            onLeave: function() {
+
+            },
+            onLeaveCompleted: function() {
+                console.log('b_Projets > onLeaveCompleted');
+                
+          
+            }
+        });
+
+        var bProjet = Barba.BaseView.extend({
+            namespace: 'projet',
+            onEnter: function() {
+                console.log('projet > onEnter');
+            },
+            onEnterCompleted: function() {
+                console.log('projet > onEnterCompleted');
+            },
+            onLeave: function() {
+                console.log('projet > onLeave');
+            },
+            onLeaveCompleted: function() {
+                console.log('projet > onLeaveCompleted');
+            }
+        });
+        
+        // init 
+        bProjet.init();
+        bProjets.init();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, container) {
+
+        // barba();
         movie();
-        // pauseMovie();
+        pauseMovie();
         burger();
         menuColor();
         showDesc();
         // lockMovie();
         projects();
 
+    });
+
+    Barba.Dispatcher.on('linkClicked', function() {
+        console.log('link: ', $(this));
+      });
+
+    $('document').ready(function () {
+
+        barba();
+        movie();
+        pauseMovie();
+        burger();
+        menuColor();
+        showDesc();
+        // lockMovie();
+        projects();
+
+        Barba.Pjax.start();
     });
 
 //# sourceMappingURL=app.js.map

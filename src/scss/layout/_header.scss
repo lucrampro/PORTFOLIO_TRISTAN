@@ -37,6 +37,7 @@
                   position: absolute;
                     top: 50%;
                     left: 50%;
+                    height: 80px;
                     transform: translate(-50%,-(50%));
 
                     &:nth-child(1) { top: 35%; }
@@ -50,7 +51,7 @@
 
                         font-family: gothamBold;
                         font-size: 50px;
-                        line-height: 220px;
+                        line-height: 70px;
                         text-align: center;
                         color: #edb551;
                         text-decoration: none;
@@ -65,7 +66,6 @@
                         font-family: gothamBold;
                         text-align: center;
                         color: $black;
-                        line-height: 210px;
                         pointer-events: none;
                     }
 
