@@ -674,19 +674,19 @@ main {
   position: relative;
 }
 
-main footer.youfil {
+main footerpProjet {
   width: 100%;
   position: absolute;
   bottom: 0;
 }
 
-.youphil {
+.pProjet {
   width: 100%;
   font-family: "gothamBold";
   padding-bottom: 200px;
 }
 
-.youphil h1 {
+.pProjet h1 {
   text-align: center;
   line-height: 40px;
   font-size: 2.5rem;
@@ -697,7 +697,7 @@ main footer.youfil {
   width: 100%;
 }
 
-.youphil .cacheImg {
+.pProjet .cacheImg {
   width: 80%;
   overflow: hidden;
   display: block;
@@ -705,22 +705,26 @@ main footer.youfil {
   margin-bottom: 20px;
 }
 
-.youphil .cacheImg img {
+.pProjet .cacheImg img {
   width: 100%;
   -webkit-transform: translateX(-10%);
           transform: translateX(-10%);
   opacity: 0;
 }
 
+.pProjet .cacheImg video {
+  width: 100%;
+}
+
 @media screen and (min-width: 980px) {
   main {
     height: 500px;
   }
-  .youphil {
+  .pProjet {
     width: 100%;
     font-family: "gothamBold";
   }
-  .youphil h1 {
+  .pProjet h1 {
     text-align: left;
     line-height: 100px;
     font-size: 8rem;
@@ -730,24 +734,24 @@ main footer.youfil {
     margin-bottom: 20px;
     margin-left: 20%;
   }
-  .youphil h1.presi {
+  .pProjet h1.presi {
     position: absolute;
     top: 270%;
   }
-  .youphil h1.creamSource {
+  .pProjet h1.creamSource {
     color: #fefefe !important;
   }
-  .youphil h1 span {
+  .pProjet h1 span {
     display: block;
   }
-  .youphil .cacheImg {
+  .pProjet .cacheImg {
     width: 50%;
     overflow: hidden;
     display: block;
     margin-bottom: 20px;
     z-index: -1;
   }
-  .youphil .cacheImg.one {
+  .pProjet .cacheImg.one {
     width: 30%;
     position: absolute;
     left: 40%;
@@ -755,10 +759,13 @@ main footer.youfil {
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
   }
-  .youphil .cacheImg.one.creamSource {
+  .pProjet .cacheImg.one.creamSource {
     left: 50%;
   }
-  .youphil .cacheImg.two {
+  .pProjet .cacheImg.one.coachy {
+    left: 50%;
+  }
+  .pProjet .cacheImg.two {
     width: 40%;
     position: absolute;
     left: 10%;
@@ -766,12 +773,12 @@ main footer.youfil {
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
   }
-  .youphil .cacheImg.two.creamSource {
+  .pProjet .cacheImg.two.creamSource {
     width: 40%;
     top: 65%;
     left: 20%;
   }
-  .youphil .cacheImg.three {
+  .pProjet .cacheImg.three {
     width: 50%;
     position: absolute;
     left: 40%;
@@ -779,11 +786,14 @@ main footer.youfil {
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
   }
-  .youphil .cacheImg.three.creamSource {
+  .pProjet .cacheImg.three.creamSource {
     width: 40%;
     left: 50%;
   }
-  .youphil .cacheImg.four {
+  .pProjet .cacheImg.three.coachy {
+    left: 40%;
+  }
+  .pProjet .cacheImg.four {
     width: 40%;
     position: absolute;
     left: 30%;
@@ -791,11 +801,23 @@ main footer.youfil {
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
   }
-  .youphil .cacheImg.four.creamSource {
+  .pProjet .cacheImg.four.creamSource {
     width: 40%;
     left: 5%;
   }
-  .youphil .cacheImg.five {
+  .pProjet .cacheImg.four.coachy {
+    width: 80%;
+    left: 10%;
+    top: 270%;
+  }
+  .pProjet .cacheImg.four.youphil {
+    width: 50%;
+    left: 50% !important;
+    top: 210% !important;
+    -webkit-transform: translateX(-50%) !important;
+            transform: translateX(-50%) !important;
+  }
+  .pProjet .cacheImg.five {
     width: 40%;
     position: absolute;
     left: 40%;
@@ -803,11 +825,11 @@ main footer.youfil {
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
   }
-  .youphil .cacheImg.five.creamSource {
+  .pProjet .cacheImg.five.creamSource {
     width: 30%;
     left: 40%;
   }
-  .youphil .cacheImg.six {
+  .pProjet .cacheImg.six {
     width: 40%;
     position: absolute;
     left: 28%;
@@ -815,20 +837,27 @@ main footer.youfil {
     -webkit-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
   }
-  .youphil .cacheImg.six.creamSource {
+  .pProjet .cacheImg.six.creamSource {
     width: 30%;
   }
-  .youphil .cacheImg img {
+  .pProjet .cacheImg img {
     width: 100%;
     -webkit-transform: translateX(-10%);
             transform: translateX(-10%);
     opacity: 0;
   }
-  footer.youfil {
+  footer.pfooter {
     width: 100%;
     position: absolute;
     bottom: 0;
-    top: 380%;
+    top: 360%;
+  }
+  footer.pfooter .date {
+    left: 50% !important;
+    top: -30% !important;
+    -webkit-transform: translate(-50%, -50%) !important;
+            transform: translate(-50%, -50%) !important;
+    font-size: 25rem !important;
   }
   footer.creamSource {
     top: 1000%;
