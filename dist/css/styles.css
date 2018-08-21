@@ -734,6 +734,9 @@ main footer.youfil {
     position: absolute;
     top: 270%;
   }
+  .youphil h1.creamSource {
+    color: #fefefe !important;
+  }
   .youphil h1 span {
     display: block;
   }
@@ -744,7 +747,7 @@ main footer.youfil {
     margin-bottom: 20px;
     z-index: -1;
   }
-  .youphil .cacheImg.rio {
+  .youphil .cacheImg.one {
     width: 30%;
     position: absolute;
     left: 40%;
@@ -752,7 +755,10 @@ main footer.youfil {
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
   }
-  .youphil .cacheImg.agri {
+  .youphil .cacheImg.one.creamSource {
+    left: 50%;
+  }
+  .youphil .cacheImg.two {
     width: 40%;
     position: absolute;
     left: 10%;
@@ -760,7 +766,12 @@ main footer.youfil {
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
   }
-  .youphil .cacheImg.bio {
+  .youphil .cacheImg.two.creamSource {
+    width: 40%;
+    top: 65%;
+    left: 20%;
+  }
+  .youphil .cacheImg.three {
     width: 50%;
     position: absolute;
     left: 40%;
@@ -768,7 +779,11 @@ main footer.youfil {
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
   }
-  .youphil .cacheImg.recy {
+  .youphil .cacheImg.three.creamSource {
+    width: 40%;
+    left: 50%;
+  }
+  .youphil .cacheImg.four {
     width: 40%;
     position: absolute;
     left: 30%;
@@ -776,7 +791,11 @@ main footer.youfil {
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
   }
-  .youphil .cacheImg.prog {
+  .youphil .cacheImg.four.creamSource {
+    width: 40%;
+    left: 5%;
+  }
+  .youphil .cacheImg.five {
     width: 40%;
     position: absolute;
     left: 40%;
@@ -784,13 +803,20 @@ main footer.youfil {
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
   }
-  .youphil .cacheImg.sarko {
+  .youphil .cacheImg.five.creamSource {
+    width: 30%;
+    left: 40%;
+  }
+  .youphil .cacheImg.six {
     width: 40%;
     position: absolute;
     left: 28%;
     top: 420%;
     -webkit-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
+  }
+  .youphil .cacheImg.six.creamSource {
+    width: 30%;
   }
   .youphil .cacheImg img {
     width: 100%;
@@ -803,6 +829,9 @@ main footer.youfil {
     position: absolute;
     bottom: 0;
     top: 380%;
+  }
+  footer.creamSource {
+    top: 1000%;
   }
 }
 

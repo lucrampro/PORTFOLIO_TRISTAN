@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tristan, Creative Developer. Paris.</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <meta name="theme-color" content="#ffce71">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <!-- <div class="loader">
+        <div id="percent">5</div>
+    </div> -->
+
+
+    <main>
+
+        <div class="youphil">
+
+
+            <h1>
+                Cream<span>source</span>
+            </h1>
+
+
+
+            <div class="cacheImg one rellax creamSource" data-rellax-speed="2.5">
+                <img src="img/homeCream.png" alt="">
+            </div>
+
+            <div class="cacheImg two rellax creamSource" data-rellax-speed="7">
+                <img src="img/loginCream.png" alt="" data-rellax-speed="5">
+            </div>
+
+            <div class="cacheImg three rellax creamSource" data-rellax-speed="10">
+                <img src="img/cremSourceMobileHome.png" alt="">
+            </div>
+
+
+            <div class="cacheImg four rellax creamSource" data-rellax-speed="7">
+                <img src="img/creamSourceMenuMobile.png" alt="">
+            </div>
+
+            <h1 class="presi rellax " data-rellax-speed="8">
+                Ice<span>cream</span>
+            </h1>
+
+            <div class="cacheImg five rellax creamSource" data-rellax-speed="13">
+                <img src="img/creamSourceLoginMobile.png" alt="">
+
+            </div>
+
+            <div class="cacheImg six rellax creamSource" data-rellax-speed="12">
+                <img src="img/MerciTristan.png" alt="">
+            </div>
+
+        </div>
+
+
+    <footer class="youfil">
+        <div class="left"><a href="">Linkedin</a></div>
+        <span>—</span>
+        <div class="right">Pensé, designé et développé en 72h, avec <a href="">Lucien Ramassamy</a></div>
+        <div class="date">2018</div>
+    </footer>
+    </main>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/rellax.min.js"></script>
+    <script src="js/youphil.js"></script>
+    <script src="js/loader.js"></script>
+    <script>
+        var isDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+
+
+        if (isDevice) {
+
+            console.log("deviceMobile");
+
+
+        } else {
+
+            var rellax = new Rellax('.rellax');
+
+        }
+    </script>
+</body>
+
+</html>

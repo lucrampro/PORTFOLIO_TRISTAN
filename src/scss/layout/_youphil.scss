@@ -98,12 +98,16 @@ footer{
             
             position: absolute;
             top: 270%;
-            
-            
-            
+              
             
         }
-
+            
+         &.creamSource{
+                
+                
+                color: #fefefe!important;
+            }
+        
         span {
 
             display: block;
@@ -124,7 +128,7 @@ footer{
         z-index: -1;
      
                 
-        &.rio{
+        &.one{
             
             
             width: 30%;
@@ -132,10 +136,16 @@ footer{
             left: 40%;
             top: 35%;
             transform: translate(0%,0%);
+            
+            &.creamSource{
+                
+                
+                left: 50%;
+            }
         }
         
                 
-        &.agri{
+        &.two{
             
             
             width: 40%;
@@ -143,43 +153,81 @@ footer{
             left: 10%;
             top: 60%;
             transform: translate(0%,0%);
+            
+            &.creamSource{
+                
+                
+                width: 40%;
+                top: 65%;
+                left: 20%;
+            }
         }
         
-        &.bio{
+        &.three{
             
             width: 50%;
             position: absolute;
             left: 40%;
             top: 160%;
             transform: translate(0%,0%);
+            
+            &.creamSource{
+                
+                
+                width: 40%;
+                left: 50%;
+            }
         }
         
-        &.recy{
+        &.four{
             
             width: 40%;
             position: absolute;
             left: 30%;
             top: 210%;
             transform: translate(0%,0%);
+            
+            
+            &.creamSource{
+                
+                
+                width: 40%;
+                left: 5%;
+            }
+            
         }
         
-        &.prog{
+        &.five{
             
             width: 40%;
             position: absolute;
             left: 40%;
             top: 580%;
             transform: translate(0%,0%);
+            
+            &.creamSource{
+                
+                
+                width: 30%;
+                left: 40%;
+            }
         }
         
 
-        &.sarko{
+        &.six{
             
             width: 40%;
             position: absolute;
             left: 28%;
             top: 420%;
             transform: translate(-50%,0%);
+            
+            &.creamSource{
+                
+                
+                width: 30%;
+                
+            }
         }
         
 
@@ -206,6 +254,12 @@ footer{
         bottom: 0;
         top: 380%;
         
+    }
+    
+    &.creamSource{
+        
+        
+        top: 1000%;
     }
     
 }
