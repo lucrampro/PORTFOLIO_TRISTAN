@@ -1,3 +1,30 @@
+main{
+    
+    position: relative;
+    
+    
+
+
+footer{
+    
+    &.youfil{
+        
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    
+}
+
+    
+    
+}
+
+
+
+
+
+
 .youphil {
 
     width: 100%;
@@ -44,7 +71,11 @@
     }
 @media screen and (min-width: $middle){
     
-    
+    main{
+        
+        height: 500px;
+        
+    }
     
 .youphil {
 
@@ -137,7 +168,7 @@
             width: 40%;
             position: absolute;
             left: 40%;
-            top: 480%;
+            top: 580%;
             transform: translate(0%,0%);
         }
         
@@ -147,7 +178,7 @@
             width: 40%;
             position: absolute;
             left: 28%;
-            top: 390%;
+            top: 420%;
             transform: translate(-50%,0%);
         }
         
@@ -166,18 +197,18 @@
     }
 
 
-    
-    
-}
-
-
 footer{
     
     &.youfil{
         
         width: 100%;
         position: absolute;
-    top: 265%;
+        bottom: 0;
+        top: 380%;
+        
     }
+    
+}
+    
     
 }

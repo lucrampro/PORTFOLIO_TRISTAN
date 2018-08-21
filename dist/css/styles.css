@@ -670,6 +670,16 @@ footer span {
   }
 }
 
+main {
+  position: relative;
+}
+
+main footer.youfil {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
 .youphil {
   width: 100%;
   font-family: "gothamBold";
@@ -703,6 +713,9 @@ footer span {
 }
 
 @media screen and (min-width: 980px) {
+  main {
+    height: 500px;
+  }
   .youphil {
     width: 100%;
     font-family: "gothamBold";
@@ -767,7 +780,7 @@ footer span {
     width: 40%;
     position: absolute;
     left: 40%;
-    top: 480%;
+    top: 580%;
     -webkit-transform: translate(0%, 0%);
             transform: translate(0%, 0%);
   }
@@ -775,7 +788,7 @@ footer span {
     width: 40%;
     position: absolute;
     left: 28%;
-    top: 390%;
+    top: 420%;
     -webkit-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
   }
@@ -785,12 +798,12 @@ footer span {
             transform: translateX(-10%);
     opacity: 0;
   }
-}
-
-footer.youfil {
-  width: 100%;
-  position: absolute;
-  top: 265%;
+  footer.youfil {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 380%;
+  }
 }
 
 .desc {
