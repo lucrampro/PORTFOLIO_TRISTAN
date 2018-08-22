@@ -1173,3 +1173,145 @@ main footerpProjet {
     left: 50%;
   }
 }
+
+.love span {
+  overflow: hidden;
+  display: block;
+}
+
+.love .blocTop {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../../img/homeLess2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: "gothamBook";
+}
+
+.love .blocTop .voileNoir {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.5;
+  background-color: #333333;
+}
+
+.love .blocTop h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-family: "gothamBold";
+  font-size: 3rem;
+  text-transform: inherit;
+  color: #fefefe;
+}
+
+.love .blocTop h1.shadow {
+  top: 50.5%;
+  left: 50.5%;
+  opacity: 0.3;
+}
+
+.love .blocMiddle {
+  height: 100vh;
+  width: 100%;
+  padding-top: 50px;
+  background: #fe9ca9;
+}
+
+.love .blocMiddle h2 {
+  width: 100%;
+  text-align: center;
+  text-transform: inherit;
+  font-family: "gothamBold";
+  font-size: 1rem;
+  color: #fefefe;
+  letter-spacing: 0.5px;
+}
+
+.love .blocMiddle .conteneur {
+  position: relative;
+  height: 200px;
+  width: 80%;
+  margin: 70px auto 0 auto;
+  font-family: "gothambold";
+  z-index: 1;
+}
+
+.love .blocMiddle .conteneur:before {
+  content: '';
+  width: 100%;
+  padding: 0 4px;
+  left: -2px;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  bottom: 2px;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
+  background: #fefefe;
+  -webkit-box-shadow: 8px 8px 0px #ff8289;
+          box-shadow: 8px 8px 0px #ff8289;
+}
+
+.love .blocMiddle .conteneur p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 5rem;
+  color: #50dec9;
+  margin: 0;
+}
+
+.love .blocMiddle .conteneur p.left {
+  top: 50%;
+  left: 20%;
+  -webkit-transform: translateY(-50%, 0);
+          transform: translateY(-50%, 0);
+  color: #cfcfcf;
+}
+
+.love .blocMiddle .conteneur p.right {
+  top: 50%;
+  left: 80%;
+  -webkit-transform: translateY(-50%, 0);
+          transform: translateY(-50%, 0);
+  color: #cfcfcf;
+}
+
+.love .blocMiddle .conteneur a {
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+
+.love .blocMiddle .conteneur a:before {
+  background: #ffce71;
+  -webkit-box-shadow: #ff8289;
+          box-shadow: #ff8289;
+  -webkit-box-shadow: 0px 4px 0px #ff8289;
+          box-shadow: 0px 4px 0px #ff8289;
+}
+
+.love .blocMiddle p {
+  margin-top: 50px;
+  font-family: "gothamBold";
+  font-size: 9rem;
+  color: #e9e9e9;
+  text-align: center;
+  width: 100%;
+}
+
+.love .blocMiddle p span {
+  font-size: 1rem;
+}
