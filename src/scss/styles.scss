@@ -18,9 +18,8 @@ $pesticide-debug-depth: false;
 @import 'layout/header';
 @import 'layout/burger';
 @import 'layout/footer';
-@import 'layout/projet';
-@import 'layout/movie';
-@import 'layout/youphil';
-@import 'layout/desc';
 
-@import 'layout/love';
+@import 'layout/movie';
+@import 'layout/desc';
+@import 'layout/projets';
+@import 'layout/projet';

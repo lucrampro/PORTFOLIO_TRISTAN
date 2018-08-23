@@ -1,119 +1,517 @@
-.projet {
+.projet-page {
 
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    margin: auto;
-    background-color: $bg_portfolio; //    CHIFFRE
-    .number {
-
-        position: absolute;
+    h2 {
+        display: inline-block;
         font-family: "gothamBold";
-        font-size: 20rem;
+        font-size: 1.5rem;
         text-align: center;
-        width: 200px;
-        color: $white;
-        transform: translate(-50%, -50%) scale(0.3);
+        background: $black;
+        padding: 20px;
+        color: $blue_portfolio;
+    }
 
-        &.nbfront {
+    h3 {
+        display: inline-block;
+        font-family: "gothamMedium";
+        font-size: 1rem;
+        text-align: center;
+        background: none;
+        padding: 20px;
+        color: $black;
 
+    }
+
+    .top-title {
+        // height: 70vh;
+        height: 97vh;
+        position: relative;
+
+        .top-big-title {
+            font-family: "superFly";
+            position: absolute;
+            // top: 50%;
+            top: 34vh;
             left: 50%;
-            top: 50%;
-            z-index: 2;
-        }
-        &.nbshadow {
+            transform: translate(-50%, -50%) rotate(-6deg);
+            // font-size: 30rem;
+            font-size: 2rem;
 
-            left: 50%;
-            top: 50%;
-            opacity: 0;
-        }
-    } //    LOGO
-    .logo {
-        position: absolute;
-        left: 51%;
-        bottom: 31%;
-        transform: translate(-20%, -50%);
-        width: 150px;
-        height: 200px; //        overflow: hidden;
-        .cacheLogo2 {
-
-            width: 100%;
-            height: 80px;
-            position: relative;
-            overflow: hidden;
-            transform: rotate(180deg);
-            transform-origin: bottom left;
-            background: $white;
-            opacity: 0;
-
-            img {
+            &:before {
+                content: '';
                 position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                width: 120px;
+                display: block;
+                width: 2000%;
+                height: 100%;
+                left: -50%;
+                // background: rgba(247, 247, 247, 0.98);
+                background: rgba(247, 247, 247, 0.9);
             }
         }
-        
-        &.p3 {
 
-            left: 23%;
+        .top-logo {
+            position: absolute;
+            // top: 50%;
+            top: 30vh;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(.8);
+            // transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+            background: none!important;
 
-            .cacheLogo3 {
-
-                width: 100%;
-                height: 80px;
+            .top-logo-content {
                 position: relative;
-                overflow: hidden;
-                background: $white;
-                transform: rotate(180deg);
-                opacity: 0;
+                width: 100%;
+                height: 100%;
+                background: white;
 
-                img {
+                img { 
+                    margin-top: 20px;
+                }
+    
+                .year {
+                    display: block;
+                    margin-top: 20px;
+                    font-family: "gothamBold";
+                    font-size: 1.5rem;
+                    color: rgba(0,0,0,.1);
+                }
+            }
+        }
+        .top-shadow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 55%;
+            left: 50%;
+            z-index: -1;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) rotate(2deg);
+            text-align: center;
+        }
+        .top-desc {
+            position: absolute;
+            // width: 500px;
+            // height: 100px;
+            // bottom: 15%;
+            // left: 50%;
+            padding: 20px;
+            color: $black;
+            opacity: 0.7;
+            // transform: translate(-50%, -50%);
+            text-align: center;
+
+            width: 100vw;
+            height: auto;
+            left: 0;
+            transform: none;
+            top: 43vh;
+        }
+
+
+
+        &.psa {
+            .top-shadow {  background: $blue_portfolio; }
+            .top-logo {
+                // width: 330px;
+                width: 90vw;
+                height: 170px;
+
+                img { width: 200px; margin-top: 30px; }
+            }
+        }
+        &.coachylive {
+            .top-shadow { background: $pink_portfolio; }
+            .top-logo {
+                // width: 400px;
+                width: 90vw;
+                height: 150px;
+
+                img { width: 250px;}
+                .year { margin-top: 0; }
+            }
+        }
+        &.creamsources {
+            .top-shadow { background: $yellow_portfolio; }
+            .top-logo {
+                width: 290px;
+                height: 170px;
+
+                img { width: 150px; }
+            }
+        }
+        &.fff {
+            .top-shadow { background: $blue_portfolio; }
+            .top-logo {
+                width: 250px;
+                height: 210px;
+
+                img { width: 100px; }
+            }
+        }
+        &.youphil {
+            .top-shadow { background: $pink_portfolio; }
+            .top-logo {
+                width: 400px;
+                height: 150px;
+
+                img { width: 250px; margin-top: 35px; }
+            }
+        }
+    }
+
+    .paralaxe {
+
+        .video {
+            margin-bottom: 50px;
+
+            .title {
+                text-align: center;
+            }
+        
+            .youtube-container {
+                position: relative;
+                width: 60vw;
+                height: 0;
+                margin: auto;
+                padding-bottom: 33vw;
+
+                .youtube {
                     position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 120px;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
     }
-    
-    .cacheDate {
 
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            text-align: center;
-            overflow: hidden;
+    @media screen and (min-width: $middle){
 
-            p {
+        .top-title {
+            height: 80vh;
 
-                font-family: "gothamBold";
-                transform: translateY(100%);
-                opacity: 0;
-                color: $greyish;
-                
-                &::before{
-                    
-                    content: "";
-                    background: $greyish;
-                    display: block;
-                    height: 5px;
-                 
-                    width: 20px;
-                    margin: auto;
-                    margin-bottom: 2px;
-                    border-radius: 10px;
-                    
-                    
+            .top-big-title {
+                top: 50%;
+                font-size: 30rem;
+
+                &:before {
+                    background: rgba(247, 247, 247, 0.98);
                 }
             }
 
+            .top-logo {
+                top: 40%;
+                transform: translate(-50%, -50%);
+            }
+            .top-desc {
+                width: 500px;
+                height: 100px;
+                bottom: 25%;
+                top: inherit;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &.psa  .top-logo { width: 330px; }
+            &.coachylive .top-logo { width: 400px; }
         }
+    }
+}
 
 
+
+
+
+// LULU
+
+// main{
+    
+//     position: relative;
+    
+    
+
+
+// footer{
+    
+//     &pProjet{
+        
+//         width: 100%;
+//         position: absolute;
+//         bottom: 0;
+//     }
+    
+// }
+
+    
+    
+// }
+
+
+
+
+
+
+.paralaxe {
+
+    width: 100%;
+    position: relative;
+    padding-bottom: 50px;
+    font-family: "gothamBold";
+
+
+    .presi {
+        text-align: center;
+        line-height: 40px;
+        font-size: 2.5rem;
+        color: $black;
+        text-transform: none;
+        margin-top: 10%;
+        margin-bottom: 100px;
+        width: 100%;
+    }
+
+        
+    .cacheImg {
+        width: 80%;
+        overflow: hidden;
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+        
+        img {  
+            width:100%;
+            transform: translateX(-10%);
+            opacity: 0;
+        }
+        
+        video { width: 100%; }
+    }
+
+    @media screen and (min-width: $middle){
+
+        width: 100vw;
+
+        &.coachylive { height: 230vh; }
+        &.creamsources { height: 230vh; }
+        &.fff { height: 220vh; }
+        &.youphil { height: 250vh; }
+
+        .presi {
+            text-align: left;
+            line-height: 100px;
+            font-size: 8rem;
+            color: $black;
+            text-transform: none;
+            margin-top: 10%;
+            margin-bottom: 20px;
+            margin-left: 20%;
+        
+            &.coachy {
+                position: absolute;
+                top: 200vh; 
+            }
+                
+            &.creamSource{  
+                color: #fefefe!important;
+            }
+            
+            span {
+                display: block;
+            }
+
+        }
+            
+        .cacheImg {
+            overflow: hidden;
+            display: block;
+            margin-bottom: 20px;
+            // z-index: -1;
+
+            &.one {
+                // width: 30%;
+                width: 80vw;
+                position: absolute;
+                // left: 40%;
+                left: 10vw;
+                transform: translate(0%,0%);
+                
+                // &.creamsources {
+                //     left: 50%;
+                // }
+                
+                // &.coachy {  
+                //     left: 50%;
+                // }
+            }
+                    
+            &.two {
+                position: absolute;
+                // left: 10%;
+                // top: 60%;
+                transform: translate(0%,0%);
+
+                &.coachy { 
+                    background: #4fe3c1; 
+                    width: 40%;
+                    left: 5vw;
+                    top: 80vh;
+                } 
+                
+                &.creamsources {       
+                    width: 25vw;
+                    left: 70%;
+                    top: 100vh;
+                }
+
+                &.fff {
+                    width: 55vw;
+                    left: 40%;
+                    top: 100vh;
+                }
+
+                &.youphil {
+                    width: 30vw;
+                    left: 15vw;
+                    top: 70vh;
+                }
+            }
+            
+            &.three {
+                // width: 50%;
+                position: absolute;
+                // left: 40%;
+                // top: 160%;
+                transform: translate(0%,0%);
+                
+                &.coachy {  
+                    left: 60vw;
+                    width: 50vw;
+                    top: 200vh;
+                    font-size: 10rem;
+                }
+                &.creamsources {       
+                    width: 30vw;
+                    left: 35vw;
+                    top: 150vh;
+                }
+                &.fff {       
+                    width: 20vw;
+                    left: 35vw;
+                    top: 200vh;
+                }
+                &.youphil {
+                    width: 55vw;
+                    left: 40vw;
+                    top: 160vh;
+                }
+            }
+            
+            &.four {
+                width: 40%;
+                position: absolute;
+                left: 30%;
+                top: 210%;
+                transform: translate(0%,0%);
+                
+                
+                
+                &.coachy{    
+                    width: 20vw;
+                    left: 75vw;
+                    top: 100vh;
+                
+                }
+                &.creamsources {       
+                    width: 25vw;
+                    left: 5vw;
+                    top: 180vh;
+                }
+                &.fff {       
+                    width: 30vw;
+                    left: 50vw;
+                    top: 210vh;
+                }
+                
+                &.youphil {
+                    width: 50vw;
+                    left: 5vw;
+                    top: 210vh;
+                }
+            }
+            
+            &.five {
+                position: absolute;
+                // left: 40%;
+                transform: translate(0%,0%);
+
+                &.coachy{    
+                    width: 25vw;
+                    left: 60vw;
+                    top: 100vh;
+                }
+                
+                &.creamsources { 
+                    width: 30vw;
+                    left: 35vw;
+                    top: 180vh;
+                }
+                &.fff {       
+                    width: 10vw;
+                    left: 15vw;
+                    top: 240vh;
+                }
+                &.youphil {
+                    width: 50vw;
+                    left: 45vw;
+                    top: 250vh;
+                }
+            }
+            
+
+            &.six {
+                position: absolute;
+                transform: translate(0%,0%);
+                
+                &.creamsources {       
+                    width: 25vw;
+                    left: 70vw;
+                    top: 250vh;
+                }
+                &.coachy{    
+                    width: 90vw;
+                    left: 5vw;
+                    top: 200vh;
+                }
+                &.fff {       
+                    width: 80vw;
+                    left: 10vw;
+                    top: 200vh;
+                }
+                &.youphil {
+                    width: 80vw;
+                    left: 10vw;
+                    top: 250vh;
+                }
+            }
+
+            &.seven {
+                position: absolute;
+                transform: translate(0%,0%);
+
+                &.creamsources {       
+                    width: 80vw;
+                    left: 10vw;
+                    top: 320vh;
+                }
+            }
+            
+            img { 
+                width:100%;
+                transform: translateX(-10%);
+                opacity: 0;
+            }
+        }
+    }
 }
